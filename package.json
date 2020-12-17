@@ -1,17 +1,19 @@
 {
-  "name": "@uniswap/sdk",
+  "name": "@zeroexchange/sdk",
   "license": "MIT",
   "version": "3.0.3",
-  "description": "🛠 An SDK for building applications on top of Uniswap.",
+  "description": "🏂 An SDK for building applications on top of Zero Exchange.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/Uniswap/uniswap-sdk.git",
+  "repository": "https://github.com/zeroexchange/sdk.git",
   "keywords": [
-    "uniswap",
-    "ethereum"
+    "zeroexchange",
+    "zero",
+    "avalanche",
+    "uniswap"
   ],
   "module": "dist/sdk.esm.js",
   "scripts": {
