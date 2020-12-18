@@ -1,7 +1,7 @@
 {
   "name": "@zeroexchange/sdk",
   "license": "MIT",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "🏂 An SDK for building applications on top of Zero Exchange.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
