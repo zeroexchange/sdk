@@ -1091,13 +1091,18 @@ function tradeComparator(a, b) {
 
 function wrappedAmount(currencyAmount, chainId) {
   if (currencyAmount instanceof TokenAmount) return currencyAmount;
-  if (currencyAmount.currency === ETHER) return new TokenAmount(WETH[chainId], currencyAmount.raw);
+
+  if (currencyAmount.currency === ETHER || currencyAmount.currency === AVAX) {
+    return new TokenAmount(WETH[chainId], currencyAmount.raw);
+  }
+
    process.env.NODE_ENV !== "production" ? invariant(false, 'CURRENCY') : invariant(false) ;
 }
 
 function wrappedCurrency(currency, chainId) {
   if (currency instanceof Token) return currency;
   if (currency === ETHER) return WETH[chainId];
+  if (currency === AVAX) return WETH[chainId];
    process.env.NODE_ENV !== "production" ? invariant(false, 'CURRENCY') : invariant(false) ;
 }
 /**
