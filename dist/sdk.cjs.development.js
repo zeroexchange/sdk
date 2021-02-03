@@ -961,8 +961,8 @@ var Route = /*#__PURE__*/function () {
     !pairs.every(function (pair) {
       return pair.chainId === pairs[0].chainId;
     }) ?  invariant(false, 'CHAIN_IDS')  : void 0;
-    !(input instanceof Token && pairs[0].involvesToken(input) || input === ETHER && pairs[0].involvesToken(WETH[pairs[0].chainId])) ?  invariant(false, 'INPUT')  : void 0;
-    !(typeof output === 'undefined' || output instanceof Token && pairs[pairs.length - 1].involvesToken(output) || output === ETHER && pairs[pairs.length - 1].involvesToken(WETH[pairs[0].chainId])) ?  invariant(false, 'OUTPUT')  : void 0;
+    !(input instanceof Token && pairs[0].involvesToken(input) || (input === ETHER || input === AVAX) && pairs[0].involvesToken(WETH[pairs[0].chainId])) ?  invariant(false, 'INPUT')  : void 0;
+    !(typeof output === 'undefined' || output instanceof Token && pairs[pairs.length - 1].involvesToken(output) || (input === ETHER || input === AVAX) && pairs[pairs.length - 1].involvesToken(WETH[pairs[0].chainId])) ?  invariant(false, 'OUTPUT')  : void 0;
     var path = [input instanceof Token ? input : WETH[pairs[0].chainId]];
 
     for (var _iterator = _createForOfIteratorHelperLoose(pairs.entries()), _step; !(_step = _iterator()).done;) {
