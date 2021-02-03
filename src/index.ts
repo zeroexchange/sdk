@@ -8,6 +8,7 @@ export {
   Rounding,
   FACTORY_ADDRESS,
   INIT_CODE_HASH,
+  FACTORY_AND_INIT,
   MINIMUM_LIQUIDITY
 } from './constants'
 

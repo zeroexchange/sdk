@@ -1,7 +1,7 @@
-import { Price } from './fractions/price';
-import { TokenAmount } from './fractions/tokenAmount';
 import { BigintIsh, ChainId } from '../constants';
+import { Price } from './fractions/price';
 import { Token } from './token';
+import { TokenAmount } from './fractions/tokenAmount';
 export declare class Pair {
     readonly liquidityToken: Token;
     private readonly tokenAmounts;
