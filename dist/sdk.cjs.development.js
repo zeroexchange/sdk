@@ -9,9 +9,9 @@ var invariant = _interopDefault(require('tiny-invariant'));
 var warning = _interopDefault(require('tiny-warning'));
 var address = require('@ethersproject/address');
 var solidity = require('@ethersproject/solidity');
+var _Decimal = _interopDefault(require('decimal.js-light'));
 var _Big = _interopDefault(require('big.js'));
 var toFormat = _interopDefault(require('toformat'));
-var _Decimal = _interopDefault(require('decimal.js-light'));
 var contracts = require('@ethersproject/contracts');
 var networks = require('@ethersproject/networks');
 var providers = require('@ethersproject/providers');
@@ -631,8 +631,14 @@ var CurrencyAmount = /*#__PURE__*/function (_Fraction) {
    */
 
 
-  CurrencyAmount.ether = function ether(amount) {
-    return new CurrencyAmount(ETHER, amount);
+  CurrencyAmount.ether = function ether(amount, chainId) {
+    var currency = ETHER;
+
+    if (chainId && chainId === exports.ChainId.AVALANCHE) {
+      currency = AVAX;
+    }
+
+    return new CurrencyAmount(currency, amount);
   };
 
   var _proto = CurrencyAmount.prototype;

@@ -4,9 +4,9 @@ import invariant from 'tiny-invariant';
 import warning from 'tiny-warning';
 import { getAddress, getCreate2Address } from '@ethersproject/address';
 import { keccak256, pack } from '@ethersproject/solidity';
+import _Decimal from 'decimal.js-light';
 import _Big from 'big.js';
 import toFormat from 'toformat';
-import _Decimal from 'decimal.js-light';
 import { Contract } from '@ethersproject/contracts';
 import { getNetwork } from '@ethersproject/networks';
 import { getDefaultProvider } from '@ethersproject/providers';
@@ -631,8 +631,14 @@ var CurrencyAmount = /*#__PURE__*/function (_Fraction) {
    */
 
 
-  CurrencyAmount.ether = function ether(amount) {
-    return new CurrencyAmount(ETHER, amount);
+  CurrencyAmount.ether = function ether(amount, chainId) {
+    var currency = ETHER;
+
+    if (chainId && chainId === ChainId.AVALANCHE) {
+      currency = AVAX;
+    }
+
+    return new CurrencyAmount(currency, amount);
   };
 
   var _proto = CurrencyAmount.prototype;
