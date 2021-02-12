@@ -1,9 +1,9 @@
-import { TradeType } from '../constants';
 import { Currency } from './currency';
+import { TradeType } from '../constants';
 import { CurrencyAmount } from './fractions/currencyAmount';
+import { Pair } from './pair';
 import { Percent } from './fractions/percent';
 import { Price } from './fractions/price';
-import { Pair } from './pair';
 import { Route } from './route';
 interface InputOutput {
     readonly inputAmount: CurrencyAmount;
