@@ -20,9 +20,9 @@ export class CurrencyAmount extends Fraction {
    */
   public static ether(amount: BigintIsh, chainId?: ChainId): CurrencyAmount {
     let currency = ETHER;
-    // if (chainId && chainId === ChainId.AVALANCHE) {
-    //   currency = AVAX;
-    // }
+    if (chainId && chainId === ChainId.AVALANCHE) {
+      currency = AVAX;
+    }
     return new CurrencyAmount(currency, amount)
   }
 
