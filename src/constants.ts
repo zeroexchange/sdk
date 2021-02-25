@@ -9,7 +9,8 @@ export enum ChainId {
   RINKEBY = 4,
   GÖRLI = 5,
   KOVAN = 42,
-  FUJI = 43113
+  FUJI = 43113,
+  AVALANCHE = 43114
 }
 
 export enum TradeType {
@@ -23,9 +24,22 @@ export enum Rounding {
   ROUND_UP
 }
 
-export const FACTORY_ADDRESS = '0x9a00c8855e6BA52491E3b4edF965443CD755D089'
+export const FACTORY_ADDRESS = '0x2Ef422F30cdb7c5F1f7267AB5CF567A88974b308'
+export const INIT_CODE_HASH = '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
 
-export const INIT_CODE_HASH = '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f'
+// export const FACTORY_ADDRESS = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
+// export const INIT_CODE_HASH = '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f'
+
+export const FACTORY_AND_INIT: any = {
+  [ChainId.MAINNET]: {
+    factoryAddress: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
+    initCodeHash: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f'
+  },
+  [ChainId.AVALANCHE]: {
+    factoryAddress: '0x2Ef422F30cdb7c5F1f7267AB5CF567A88974b308',
+    initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
+  }
+}
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 
