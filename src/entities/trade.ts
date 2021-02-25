@@ -1,4 +1,4 @@
-import { AVAX, Currency, ETHER } from './currency'
+import { AVAX, BNB, Currency, ETHER } from './currency'
 import { ChainId, ONE, TradeType, ZERO } from '../constants'
 import { Token, WETH, currencyEquals } from './token'
 
@@ -89,7 +89,7 @@ export interface BestTradeOptions {
  */
 function wrappedAmount(currencyAmount: CurrencyAmount, chainId: ChainId): TokenAmount {
   if (currencyAmount instanceof TokenAmount) return currencyAmount
-  if (currencyAmount.currency === ETHER || currencyAmount.currency === AVAX) {
+  if (currencyAmount.currency === ETHER || currencyAmount.currency === AVAX || currencyAmount.currency === BNB) {
     return new TokenAmount(WETH[chainId], currencyAmount.raw)
   }
   invariant(false, 'CURRENCY')
@@ -99,6 +99,7 @@ function wrappedCurrency(currency: Currency, chainId: ChainId): Token {
   if (currency instanceof Token) return currency
   if (currency === ETHER) return WETH[chainId]
   if (currency === AVAX) return WETH[chainId]
+  if (currency === BNB) return WETH[chainId]
   invariant(false, 'CURRENCY')
 }
 
@@ -182,13 +183,13 @@ export class Trade {
     this.inputAmount =
       tradeType === TradeType.EXACT_INPUT
         ? amount
-        : route.input === ETHER || route.input === AVAX
+        : route.input === ETHER || route.input === AVAX || route.input === BNB
           ? CurrencyAmount.ether(amounts[0].raw, route.chainId)
           : amounts[0]
     this.outputAmount =
       tradeType === TradeType.EXACT_OUTPUT
         ? amount
-        : route.output === ETHER || route.output === AVAX
+        : route.output === ETHER || route.output === AVAX || route.output === BNB
           ? CurrencyAmount.ether(amounts[amounts.length - 1].raw, route.chainId)
           : amounts[amounts.length - 1]
     this.executionPrice = new Price(

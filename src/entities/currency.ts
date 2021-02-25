@@ -17,6 +17,7 @@ export class Currency {
    */
   public static readonly ETHER: Currency = new Currency(18, 'ETH', 'Ether')
   public static readonly AVAX: Currency = new Currency(18, 'AVAX', 'AVAX')
+  public static readonly BNB: Currency = new Currency(18, 'BNB', 'BNB')
 
 
   /**
@@ -36,4 +37,5 @@ export class Currency {
 
 const ETHER = Currency.ETHER
 const AVAX = Currency.AVAX
-export { ETHER, AVAX }
+const BNB = Currency.BNB
+export { ETHER, AVAX, BNB }

@@ -1,4 +1,4 @@
-import { AVAX, Currency, ETHER } from '../currency'
+import { AVAX, BNB, Currency, ETHER } from '../currency'
 import { BigintIsh, ChainId, Rounding, SolidityType, TEN } from '../../constants'
 import { parseBigintIsh, validateSolidityTypeInstance } from '../../utils'
 
@@ -22,6 +22,9 @@ export class CurrencyAmount extends Fraction {
     let currency = ETHER;
     if (chainId && chainId === ChainId.AVALANCHE) {
       currency = AVAX;
+    }
+    if (chainId && chainId === ChainId.SMART_CHAIN) {
+      currency = BNB;
     }
     return new CurrencyAmount(currency, amount)
   }

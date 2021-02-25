@@ -20,6 +20,8 @@ export class Blockchain {
   public static readonly ETHEREUM_TEST: Blockchain = new Blockchain(18, 'TETH', 'Ethereum (Testnet)')
   public static readonly AVALANCHE: Blockchain = new Blockchain(18, 'AVAX', 'Avalanche')
   public static readonly AVALANCHE_TEST: Blockchain = new Blockchain(18, 'TAVAX', 'Avalanche (Testnet)')
+  public static readonly SMART_CHAIN: Blockchain = new Blockchain(18, 'BNB', 'Smart Chain')
+  public static readonly SMART_CHAIN_TEST: Blockchain = new Blockchain(18, 'TBNB', 'Smart Chain (Testnet)')
   public static readonly POLKADOT: Blockchain = new Blockchain(18, 'DOT', 'Polkadot')
   public static readonly POLKADOT_TEST: Blockchain = new Blockchain(18, 'TDOT', 'Polkadot (Testnet)')
 
@@ -39,4 +41,7 @@ export class Blockchain {
 }
 
 const ETHEREUM = Blockchain.ETHEREUM
-export { ETHEREUM, AVALANCHE, POLKADOT }
+const AVALANCHE = Blockchain.AVALANCHE
+const POLKADOT = Blockchain.POLKADOT
+const SMART_CHAIN = Blockchain.SMART_CHAIN
+export { ETHEREUM, AVALANCHE, POLKADOT, SMART_CHAIN }
