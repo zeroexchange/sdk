@@ -10,7 +10,8 @@ export enum ChainId {
   GÖRLI = 5,
   KOVAN = 42,
   FUJI = 43113,
-  AVALANCHE = 43114
+  AVALANCHE = 43114,
+  SMART_CHAIN = 97,
 }
 
 export enum TradeType {
@@ -37,6 +38,10 @@ export const FACTORY_AND_INIT: any = {
   },
   [ChainId.AVALANCHE]: {
     factoryAddress: '0x2Ef422F30cdb7c5F1f7267AB5CF567A88974b308',
+    initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
+  },
+  [ChainId.SMART_CHAIN]: {
+    factoryAddress: '0x0B80DE786Dfb724A7569B378fBEaE432AdFB9223',
     initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
   }
 }
