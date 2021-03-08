@@ -14,6 +14,8 @@ export declare class Blockchain {
     static readonly ETHEREUM_TEST: Blockchain;
     static readonly AVALANCHE: Blockchain;
     static readonly AVALANCHE_TEST: Blockchain;
+    static readonly SMART_CHAIN: Blockchain;
+    static readonly SMART_CHAIN_TEST: Blockchain;
     static readonly POLKADOT: Blockchain;
     static readonly POLKADOT_TEST: Blockchain;
     /**
@@ -25,4 +27,7 @@ export declare class Blockchain {
     protected constructor(decimals: number, symbol?: string, name?: string);
 }
 declare const ETHEREUM: Blockchain;
-export { ETHEREUM, AVALANCHE, POLKADOT };
+declare const AVALANCHE: Blockchain;
+declare const POLKADOT: Blockchain;
+declare const SMART_CHAIN: Blockchain;
+export { ETHEREUM, AVALANCHE, POLKADOT, SMART_CHAIN };
