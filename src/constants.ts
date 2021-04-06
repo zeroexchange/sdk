@@ -37,12 +37,24 @@ export const FACTORY_AND_INIT: any = {
     factoryAddress: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
     initCodeHash: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f'
   },
+  [ChainId.RINKEBY]: {
+    factoryAddress: '0x875D0F2ad61803927c087ac2ef82539706f5364C',
+    initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
+  },
   [ChainId.AVALANCHE]: {
     factoryAddress: '0x2Ef422F30cdb7c5F1f7267AB5CF567A88974b308',
     initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
   },
+  [ChainId.FUJI]: {
+    factoryAddress: '0xeEdaAB3cdb85B77430f2272f6cDbaE2020F48c80',
+    initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
+  },
   [ChainId.SMART_CHAIN]: {
     factoryAddress: '0x52AbdB3536a3a966056e096F2572B2755df26eac',
+    initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
+  },
+  [ChainId.SMART_CHAIN_TEST]: {
+    factoryAddress: '0x2583e5E9c4E0CA0C4F4DfFA5eacC1ce1fC0e277c',
     initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
   }
 }
