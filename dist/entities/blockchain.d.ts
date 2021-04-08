@@ -16,8 +16,7 @@ export declare class Blockchain {
     static readonly AVALANCHE_TEST: Blockchain;
     static readonly SMART_CHAIN: Blockchain;
     static readonly SMART_CHAIN_TEST: Blockchain;
-    static readonly POLKADOT: Blockchain;
-    static readonly POLKADOT_TEST: Blockchain;
+    static readonly MOONBEAM_ALPHA: Blockchain;
     /**
      * Constructs an instance of the base class `Blockchain`. The only instance of the base class `Blockchain` is `Blockchain.ETHER`.
      * @param decimals decimals of the currency
@@ -28,6 +27,6 @@ export declare class Blockchain {
 }
 declare const ETHEREUM: Blockchain;
 declare const AVALANCHE: Blockchain;
-declare const POLKADOT: Blockchain;
 declare const SMART_CHAIN: Blockchain;
-export { ETHEREUM, AVALANCHE, POLKADOT, SMART_CHAIN };
+declare const MOONBEAM_ALPHA: Blockchain;
+export { ETHEREUM, AVALANCHE, SMART_CHAIN, MOONBEAM_ALPHA };
