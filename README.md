@@ -5,7 +5,7 @@
 [![npm version](https://img.shields.io/npm/v/@zeroexchange/sdk/latest.svg)](https://www.npmjs.com/package/@zeroexchange/sdk/v/latest)
 [![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@zeroexchange/sdk/latest.svg)](https://bundlephobia.com/result?p=@zeroexchange/sdk@latest)
 
-In-depth documentation on this SDK is available at [zero.exchange](https://docs.zero.exchange/getting-started/).
+In-depth documentation on this SDK is available at the [0.exchange docs site](https://0-exchange.gitbook.io/0-exchange-docs/).
 
 ## Running tests
 
