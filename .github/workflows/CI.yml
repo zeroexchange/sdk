@@ -37,7 +37,6 @@ jobs:
             ${{ matrix.os }}-yarn-
 
       - run: yarn
-
       - run: yarn lint
       - run: npx browserslist@latest --update-db
       - run: yarn build
