@@ -13,7 +13,7 @@ export enum ChainId {
   AVALANCHE = 43114,
   SMART_CHAIN = 56,
   SMART_CHAIN_TEST = 97,
-  MOONBEAM_ALPHA = 1287,
+  MOONBEAM_ALPHA = 1287
 }
 
 export enum TradeType {
@@ -61,7 +61,7 @@ export const FACTORY_AND_INIT: any = {
   [ChainId.MOONBEAM_ALPHA]: {
     factoryAddress: '0xaFEaF790a4c0B8D379936D8Df73De364051EEBC2',
     initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
-  },
+  }
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)

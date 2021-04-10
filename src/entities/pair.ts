@@ -1,14 +1,4 @@
-import {
-  BigintIsh,
-  ChainId,
-  FACTORY_AND_INIT,
-  FIVE,
-  MINIMUM_LIQUIDITY,
-  ONE,
-  ZERO,
-  _1000,
-  _997
-} from '../constants'
+import { BigintIsh, ChainId, FACTORY_AND_INIT, FIVE, MINIMUM_LIQUIDITY, ONE, ZERO, _1000, _997 } from '../constants'
 import { InsufficientInputAmountError, InsufficientReservesError } from '../errors'
 import { keccak256, pack } from '@ethersproject/solidity'
 import { parseBigintIsh, sqrt } from '../utils'
@@ -28,15 +18,15 @@ export class Pair {
 
   public static getAddress(tokenA: Token, tokenB: Token): string {
     const tokens = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA] // does safety checks
-    if (PAIR_ADDRESS_CACHE ?.[tokens[0].address] ?.[tokens[1].address] === undefined) {
+    if (PAIR_ADDRESS_CACHE?.[tokens[0].address]?.[tokens[1].address] === undefined) {
       PAIR_ADDRESS_CACHE = {
         ...PAIR_ADDRESS_CACHE,
         [tokens[0].address]: {
-          ...PAIR_ADDRESS_CACHE ?.[tokens[0].address],
+          ...PAIR_ADDRESS_CACHE?.[tokens[0].address],
           [tokens[1].address]: getCreate2Address(
-            FACTORY_AND_INIT[tokens[0] ?.chainId] ?.factoryAddress,
+            FACTORY_AND_INIT[tokens[0]?.chainId]?.factoryAddress,
             keccak256(['bytes'], [pack(['address', 'address'], [tokens[0].address, tokens[1].address])]),
-            FACTORY_AND_INIT[tokens[0] ?.chainId] ?.initCodeHash,
+            FACTORY_AND_INIT[tokens[0]?.chainId]?.initCodeHash
           )
         }
       }

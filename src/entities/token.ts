@@ -81,8 +81,32 @@ export const WETH = {
   [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6', 18, 'WETH', 'Wrapped Ether'),
   [ChainId.KOVAN]: new Token(ChainId.KOVAN, '0xd0A1E359811322d97991E03f863a0C30C2cF029C', 18, 'WETH', 'Wrapped Ether'),
   [ChainId.FUJI]: new Token(ChainId.FUJI, '0x4e7a7ffc71Fb28b037f39b5f5cB8aF0bf5cF3B5C', 18, 'WAVAX', 'Wrapped AVAX'),
-  [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7', 18, 'WAVAX', 'Wrapped AVAX'),
-  [ChainId.SMART_CHAIN]: new Token(ChainId.SMART_CHAIN, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'),
-  [ChainId.SMART_CHAIN_TEST]: new Token(ChainId.SMART_CHAIN_TEST, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB'),
-  [ChainId.MOONBEAM_ALPHA]: new Token(ChainId.MOONBEAM_ALPHA, '0x15623F3b7219FB862dE760c212fFcD13d201c6c6', 18, 'WDEV', 'Wrapped DEV')
+  [ChainId.AVALANCHE]: new Token(
+    ChainId.AVALANCHE,
+    '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7',
+    18,
+    'WAVAX',
+    'Wrapped AVAX'
+  ),
+  [ChainId.SMART_CHAIN]: new Token(
+    ChainId.SMART_CHAIN,
+    '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+    18,
+    'WBNB',
+    'Wrapped BNB'
+  ),
+  [ChainId.SMART_CHAIN_TEST]: new Token(
+    ChainId.SMART_CHAIN_TEST,
+    '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
+    18,
+    'WBNB',
+    'Wrapped BNB'
+  ),
+  [ChainId.MOONBEAM_ALPHA]: new Token(
+    ChainId.MOONBEAM_ALPHA,
+    '0x15623F3b7219FB862dE760c212fFcD13d201c6c6',
+    18,
+    'WDEV',
+    'Wrapped DEV'
+  )
 }
