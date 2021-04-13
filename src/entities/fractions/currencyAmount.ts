@@ -26,7 +26,7 @@ export class CurrencyAmount extends Fraction {
     if (chainId && chainId === ChainId.SMART_CHAIN || chainId === ChainId.SMART_CHAIN_TEST) {
       currency = BNB;
     }
-    if (chainId && chainId === ChainId.MOONBEAM_ALPHA) {
+    if (chainId && chainId === ChainId.MOONBASE_ALPHA) {
       currency = DEV;
     }
     return new CurrencyAmount(currency, amount)
