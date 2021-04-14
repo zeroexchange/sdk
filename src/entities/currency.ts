@@ -19,7 +19,7 @@ export class Currency {
   public static readonly AVAX: Currency = new Currency(18, 'AVAX', 'AVAX')
   public static readonly BNB: Currency = new Currency(18, 'BNB', 'BNB')
   public static readonly DEV: Currency = new Currency(18, 'DEV', 'DEV')
-  public static readonly MATIC: Currency = new Currency(18, 'DEV', 'MATIC')
+  public static readonly MATIC: Currency = new Currency(18, 'MATIC', 'MATIC')
 
 
   /**
