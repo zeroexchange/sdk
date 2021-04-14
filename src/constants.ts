@@ -60,7 +60,7 @@ export const FACTORY_AND_INIT: any = {
     initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
   },
   [ChainId.MOONBASE_ALPHA]: {
-    factoryAddress: '0xaFEaF790a4c0B8D379936D8Df73De364051EEBC2',
+    factoryAddress: '0x2583e5E9c4E0CA0C4F4DfFA5eacC1ce1fC0e277c',
     initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
   },
   [ChainId.MUMBAI]: {
