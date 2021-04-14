@@ -23,6 +23,7 @@ export class Blockchain {
   public static readonly SMART_CHAIN: Blockchain = new Blockchain(18, 'BNB', 'Smart Chain')
   public static readonly SMART_CHAIN_TEST: Blockchain = new Blockchain(18, 'TBNB', 'Smart Chain (Testnet)')
   public static readonly MOONBASE_ALPHA: Blockchain = new Blockchain(18, 'DEV', 'Moonbase Alpha (Testnet)')
+  public static readonly MUMBAI: Blockchain = new Blockchain(18, 'MATIC', 'Mumbai (Testnet)')
 
   /**
    * Constructs an instance of the base class `Blockchain`. The only instance of the base class `Blockchain` is `Blockchain.ETHER`.
@@ -43,4 +44,5 @@ const ETHEREUM = Blockchain.ETHEREUM
 const AVALANCHE = Blockchain.AVALANCHE
 const SMART_CHAIN = Blockchain.SMART_CHAIN
 const MOONBASE_ALPHA = Blockchain.MOONBASE_ALPHA
-export { ETHEREUM, AVALANCHE, SMART_CHAIN, MOONBASE_ALPHA }
+const MUMBAI = Blockchain.MUMBAI
+export { ETHEREUM, AVALANCHE, SMART_CHAIN, MOONBASE_ALPHA, MUMBAI }
