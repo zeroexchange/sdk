@@ -30,6 +30,7 @@ var _FACTORY_AND_INIT, _SOLIDITY_TYPE_MAXIMA;
   ChainId[ChainId["SMART_CHAIN"] = 56] = "SMART_CHAIN";
   ChainId[ChainId["SMART_CHAIN_TEST"] = 97] = "SMART_CHAIN_TEST";
   ChainId[ChainId["MOONBASE_ALPHA"] = 1287] = "MOONBASE_ALPHA";
+  ChainId[ChainId["MUMBAI"] = 80001] = "MUMBAI";
 })(exports.ChainId || (exports.ChainId = {}));
 
 (function (TradeType) {
@@ -67,6 +68,9 @@ var FACTORY_AND_INIT = (_FACTORY_AND_INIT = {}, _FACTORY_AND_INIT[exports.ChainI
   initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
 }, _FACTORY_AND_INIT[exports.ChainId.MOONBASE_ALPHA] = {
   factoryAddress: '0xaFEaF790a4c0B8D379936D8Df73De364051EEBC2',
+  initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
+}, _FACTORY_AND_INIT[exports.ChainId.MUMBAI] = {
+  factoryAddress: '0xeEdaAB3cdb85B77430f2272f6cDbaE2020F48c80',
   initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
 }, _FACTORY_AND_INIT);
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
@@ -441,10 +445,12 @@ Currency.ETHER = /*#__PURE__*/new Currency(18, 'ETH', 'Ether');
 Currency.AVAX = /*#__PURE__*/new Currency(18, 'AVAX', 'AVAX');
 Currency.BNB = /*#__PURE__*/new Currency(18, 'BNB', 'BNB');
 Currency.DEV = /*#__PURE__*/new Currency(18, 'DEV', 'DEV');
+Currency.MATIC = /*#__PURE__*/new Currency(18, 'DEV', 'MATIC');
 var ETHER = Currency.ETHER;
 var AVAX = Currency.AVAX;
 var BNB = Currency.BNB;
 var DEV = Currency.DEV;
+var MATIC = Currency.MATIC;
 
 var _WETH;
 /**
@@ -509,7 +515,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.ROPSTEN] = /*#__PURE__*/new Token(exports.ChainId.ROPSTEN, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.RINKEBY] = /*#__PURE__*/new Token(exports.ChainId.RINKEBY, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.GÖRLI] = /*#__PURE__*/new Token(exports.ChainId.GÖRLI, '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.KOVAN] = /*#__PURE__*/new Token(exports.ChainId.KOVAN, '0xd0A1E359811322d97991E03f863a0C30C2cF029C', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.FUJI] = /*#__PURE__*/new Token(exports.ChainId.FUJI, '0x4e7a7ffc71Fb28b037f39b5f5cB8aF0bf5cF3B5C', 18, 'WAVAX', 'Wrapped AVAX'), _WETH[exports.ChainId.AVALANCHE] = /*#__PURE__*/new Token(exports.ChainId.AVALANCHE, '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7', 18, 'WAVAX', 'Wrapped AVAX'), _WETH[exports.ChainId.SMART_CHAIN] = /*#__PURE__*/new Token(exports.ChainId.SMART_CHAIN, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'), _WETH[exports.ChainId.SMART_CHAIN_TEST] = /*#__PURE__*/new Token(exports.ChainId.SMART_CHAIN_TEST, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB'), _WETH[exports.ChainId.MOONBASE_ALPHA] = /*#__PURE__*/new Token(exports.ChainId.MOONBASE_ALPHA, '0x15623F3b7219FB862dE760c212fFcD13d201c6c6', 18, 'WDEV', 'Wrapped DEV'), _WETH);
+var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.ROPSTEN] = /*#__PURE__*/new Token(exports.ChainId.ROPSTEN, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.RINKEBY] = /*#__PURE__*/new Token(exports.ChainId.RINKEBY, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.GÖRLI] = /*#__PURE__*/new Token(exports.ChainId.GÖRLI, '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.KOVAN] = /*#__PURE__*/new Token(exports.ChainId.KOVAN, '0xd0A1E359811322d97991E03f863a0C30C2cF029C', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.FUJI] = /*#__PURE__*/new Token(exports.ChainId.FUJI, '0x4e7a7ffc71Fb28b037f39b5f5cB8aF0bf5cF3B5C', 18, 'WAVAX', 'Wrapped AVAX'), _WETH[exports.ChainId.AVALANCHE] = /*#__PURE__*/new Token(exports.ChainId.AVALANCHE, '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7', 18, 'WAVAX', 'Wrapped AVAX'), _WETH[exports.ChainId.SMART_CHAIN] = /*#__PURE__*/new Token(exports.ChainId.SMART_CHAIN, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'), _WETH[exports.ChainId.SMART_CHAIN_TEST] = /*#__PURE__*/new Token(exports.ChainId.SMART_CHAIN_TEST, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB'), _WETH[exports.ChainId.MOONBASE_ALPHA] = /*#__PURE__*/new Token(exports.ChainId.MOONBASE_ALPHA, '0x15623F3b7219FB862dE760c212fFcD13d201c6c6', 18, 'WDEV', 'Wrapped DEV'), _WETH[exports.ChainId.MUMBAI] = /*#__PURE__*/new Token(exports.ChainId.MUMBAI, '0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889', 18, 'WMATIC', 'Wrapped MATIC'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
@@ -666,6 +672,10 @@ var CurrencyAmount = /*#__PURE__*/function (_Fraction) {
 
     if (chainId && chainId === exports.ChainId.MOONBASE_ALPHA) {
       currency = DEV;
+    }
+
+    if (chainId && chainId === exports.ChainId.MUMBAI) {
+      currency = MATIC;
     }
 
     return new CurrencyAmount(currency, amount);
@@ -2485,6 +2495,7 @@ exports.Fraction = Fraction;
 exports.INIT_CODE_HASH = INIT_CODE_HASH;
 exports.InsufficientInputAmountError = InsufficientInputAmountError;
 exports.InsufficientReservesError = InsufficientReservesError;
+exports.MATIC = MATIC;
 exports.MINIMUM_LIQUIDITY = MINIMUM_LIQUIDITY;
 exports.Pair = Pair;
 exports.Percent = Percent;
