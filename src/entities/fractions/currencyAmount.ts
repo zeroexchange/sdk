@@ -1,4 +1,4 @@
-import { AVAX, BNB, DEV, Currency, ETHER } from '../currency'
+import { AVAX, BNB, DEV, MATIC, Currency, ETHER } from '../currency'
 import { BigintIsh, ChainId, Rounding, SolidityType, TEN } from '../../constants'
 import { parseBigintIsh, validateSolidityTypeInstance } from '../../utils'
 
@@ -26,8 +26,12 @@ export class CurrencyAmount extends Fraction {
     if ((chainId && chainId === ChainId.SMART_CHAIN) || chainId === ChainId.SMART_CHAIN_TEST) {
       currency = BNB
     }
-    if (chainId && chainId === ChainId.MOONBEAM_ALPHA) {
-      currency = DEV
+
+    if (chainId && chainId === ChainId.MOONBASE_ALPHA) {
+      currency = DEV;
+    }
+    if (chainId && chainId === ChainId.MUMBAI) {
+      currency = MATIC;
     }
     return new CurrencyAmount(currency, amount)
   }
