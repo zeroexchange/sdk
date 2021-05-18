@@ -32,6 +32,9 @@ export class CurrencyAmount extends Fraction {
     if (chainId && chainId === ChainId.MUMBAI) {
       currency = MATIC;
     }
+    if (chainId && chainId === ChainId.MATIC) {
+      currency = MATIC;
+    }
     return new CurrencyAmount(currency, amount)
   }
 

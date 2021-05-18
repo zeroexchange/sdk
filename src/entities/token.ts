@@ -85,5 +85,6 @@ export const WETH = {
   [ChainId.SMART_CHAIN]: new Token(ChainId.SMART_CHAIN, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'),
   [ChainId.SMART_CHAIN_TEST]: new Token(ChainId.SMART_CHAIN_TEST, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB'),
   [ChainId.MOONBASE_ALPHA]: new Token(ChainId.MOONBASE_ALPHA, '0x15623F3b7219FB862dE760c212fFcD13d201c6c6', 18, 'WDEV', 'Wrapped DEV'),
-  [ChainId.MUMBAI]: new Token(ChainId.MUMBAI, '0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889', 18, 'WMATIC', 'Wrapped MATIC')
+  [ChainId.MUMBAI]: new Token(ChainId.MUMBAI, '0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889', 18, 'WMATIC', 'Wrapped MATIC'),
+  [ChainId.MATIC]: new Token(ChainId.MATIC, '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270', 18, 'WMATIC', 'Wrapped MATIC in Mainnet')
 }
