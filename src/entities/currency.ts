@@ -1,7 +1,6 @@
 import JSBI from 'jsbi'
-import { SolidityType } from '../constants'
+import { SolidityType, ChainId } from '../constants'
 import { validateSolidityTypeInstance } from '../utils'
-
 /**
  * A currency is any fungible financial instrument on Ethereum, including Ether and all ERC20 tokens.
  *
@@ -37,10 +36,24 @@ export class Currency {
   }
 }
 
-const ETHER = Currency.ETHER
-const AVAX = Currency.AVAX
-const BNB = Currency.BNB
-const DEV = Currency.DEV
-const MATIC = Currency.MATIC
-const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC];
-export { ETHER, AVAX, BNB, DEV, MATIC, ETHER_CURRENCIES }
+export const ETHER = Currency.ETHER
+export const AVAX = Currency.AVAX
+export const BNB = Currency.BNB
+export const DEV = Currency.DEV
+export const MATIC = Currency.MATIC
+export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC];
+
+export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
+  [ChainId.MAINNET, ETHER],
+  [ChainId.ROPSTEN, ETHER],
+  [ChainId.RINKEBY, ETHER],
+  [ChainId.GÖRLI, ETHER],
+  [ChainId.KOVAN, ETHER],
+  [ChainId.FUJI, AVAX],
+  [ChainId.AVALANCHE, AVAX],
+  [ChainId.SMART_CHAIN, BNB],
+  [ChainId.SMART_CHAIN_TEST, BNB],
+  [ChainId.MOONBASE_ALPHA, DEV],
+  [ChainId.MUMBAI, MATIC],
+  [ChainId.MATIC, MATIC],
+];

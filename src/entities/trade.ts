@@ -1,4 +1,4 @@
-import { AVAX, BNB, Currency, ETHER, ETHER_CURRENCIES } from './currency'
+import { Currency, ETHER_CURRENCIES } from './currency'
 import { ChainId, ONE, TradeType, ZERO } from '../constants'
 import { Token, WETH, currencyEquals } from './token'
 
@@ -183,13 +183,13 @@ export class Trade {
     this.inputAmount =
       tradeType === TradeType.EXACT_INPUT
         ? amount
-        : route.input === ETHER || route.input === AVAX || route.input === BNB
+        : ETHER_CURRENCIES.includes(route.input)
           ? CurrencyAmount.ether(amounts[0].raw, route.chainId)
           : amounts[0]
     this.outputAmount =
       tradeType === TradeType.EXACT_OUTPUT
         ? amount
-        : route.output === ETHER || route.output === AVAX || route.output === BNB
+        : ETHER_CURRENCIES.includes(route.output)
           ? CurrencyAmount.ether(amounts[amounts.length - 1].raw, route.chainId)
           : amounts[amounts.length - 1]
     this.executionPrice = new Price(

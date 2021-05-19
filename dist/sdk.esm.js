@@ -456,6 +456,7 @@ var BNB = Currency.BNB;
 var DEV = Currency.DEV;
 var MATIC = Currency.MATIC;
 var ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC];
+var CHAIN_IDS_AND_CURRENCIES = [[ChainId.MAINNET, ETHER], [ChainId.ROPSTEN, ETHER], [ChainId.RINKEBY, ETHER], [ChainId.GÖRLI, ETHER], [ChainId.KOVAN, ETHER], [ChainId.FUJI, AVAX], [ChainId.AVALANCHE, AVAX], [ChainId.SMART_CHAIN, BNB], [ChainId.SMART_CHAIN_TEST, BNB], [ChainId.MOONBASE_ALPHA, DEV], [ChainId.MUMBAI, MATIC], [ChainId.MATIC, MATIC]];
 
 var _WETH;
 /**
@@ -1061,8 +1062,8 @@ var Route = /*#__PURE__*/function () {
     !pairs.every(function (pair) {
       return pair.chainId === pairs[0].chainId;
     }) ? process.env.NODE_ENV !== "production" ? invariant(false, 'CHAIN_IDS') : invariant(false) : void 0;
-    !(input instanceof Token && pairs[0].involvesToken(input) || (input === ETHER || input === AVAX || input === BNB) && pairs[0].involvesToken(WETH[pairs[0].chainId])) ? process.env.NODE_ENV !== "production" ? invariant(false, 'INPUT') : invariant(false) : void 0;
-    !(typeof output === 'undefined' || output instanceof Token && pairs[pairs.length - 1].involvesToken(output) || (output === ETHER || output === AVAX || output === BNB) && pairs[pairs.length - 1].involvesToken(WETH[pairs[0].chainId])) ? process.env.NODE_ENV !== "production" ? invariant(false, 'OUTPUT') : invariant(false) : void 0;
+    !(input instanceof Token && pairs[0].involvesToken(input) || ETHER_CURRENCIES.includes(input) && pairs[0].involvesToken(WETH[pairs[0].chainId])) ? process.env.NODE_ENV !== "production" ? invariant(false, 'INPUT') : invariant(false) : void 0;
+    !(typeof output === 'undefined' || output instanceof Token && pairs[pairs.length - 1].involvesToken(output) || ETHER_CURRENCIES.includes(output) && pairs[pairs.length - 1].involvesToken(WETH[pairs[0].chainId])) ? process.env.NODE_ENV !== "production" ? invariant(false, 'OUTPUT') : invariant(false) : void 0;
     var path = [input instanceof Token ? input : WETH[pairs[0].chainId]];
 
     for (var _iterator = _createForOfIteratorHelperLoose(pairs.entries()), _step; !(_step = _iterator()).done;) {
@@ -1251,8 +1252,8 @@ var Trade = /*#__PURE__*/function () {
 
     this.route = route;
     this.tradeType = tradeType;
-    this.inputAmount = tradeType === TradeType.EXACT_INPUT ? amount : route.input === ETHER || route.input === AVAX || route.input === BNB ? CurrencyAmount.ether(amounts[0].raw, route.chainId) : amounts[0];
-    this.outputAmount = tradeType === TradeType.EXACT_OUTPUT ? amount : route.output === ETHER || route.output === AVAX || route.output === BNB ? CurrencyAmount.ether(amounts[amounts.length - 1].raw, route.chainId) : amounts[amounts.length - 1];
+    this.inputAmount = tradeType === TradeType.EXACT_INPUT ? amount : ETHER_CURRENCIES.includes(route.input) ? CurrencyAmount.ether(amounts[0].raw, route.chainId) : amounts[0];
+    this.outputAmount = tradeType === TradeType.EXACT_OUTPUT ? amount : ETHER_CURRENCIES.includes(route.output) ? CurrencyAmount.ether(amounts[amounts.length - 1].raw, route.chainId) : amounts[amounts.length - 1];
     this.executionPrice = new Price(this.inputAmount.currency, this.outputAmount.currency, this.inputAmount.raw, this.outputAmount.raw);
     this.nextMidPrice = Price.fromRoute(new Route(nextPairs, route.input));
     this.priceImpact = computePriceImpact(route.midPrice, this.inputAmount, this.outputAmount);
@@ -2492,5 +2493,5 @@ var Fetcher = /*#__PURE__*/function () {
   return Fetcher;
 }();
 
-export { AVAX, BNB, ChainId, Currency, CurrencyAmount, DEV, ETHER, ETHER_CURRENCIES, FACTORY_ADDRESS, FACTORY_AND_INIT, Fetcher, Fraction, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, MATIC, MINIMUM_LIQUIDITY, Pair, Percent, Price, Rounding, Route, Router, Token, TokenAmount, Trade, TradeType, WETH, currencyEquals, inputOutputComparator, tradeComparator };
+export { AVAX, BNB, CHAIN_IDS_AND_CURRENCIES, ChainId, Currency, CurrencyAmount, DEV, ETHER, ETHER_CURRENCIES, FACTORY_ADDRESS, FACTORY_AND_INIT, Fetcher, Fraction, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, MATIC, MINIMUM_LIQUIDITY, Pair, Percent, Price, Rounding, Route, Router, Token, TokenAmount, Trade, TradeType, WETH, currencyEquals, inputOutputComparator, tradeComparator };
 //# sourceMappingURL=sdk.esm.js.map

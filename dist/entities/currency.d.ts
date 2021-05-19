@@ -1,3 +1,4 @@
+import { ChainId } from '../constants';
 /**
  * A currency is any fungible financial instrument on Ethereum, including Ether and all ERC20 tokens.
  *
@@ -23,10 +24,10 @@ export declare class Currency {
      */
     protected constructor(decimals: number, symbol?: string, name?: string);
 }
-declare const ETHER: Currency;
-declare const AVAX: Currency;
-declare const BNB: Currency;
-declare const DEV: Currency;
-declare const MATIC: Currency;
-declare const ETHER_CURRENCIES: Currency[];
-export { ETHER, AVAX, BNB, DEV, MATIC, ETHER_CURRENCIES };
+export declare const ETHER: Currency;
+export declare const AVAX: Currency;
+export declare const BNB: Currency;
+export declare const DEV: Currency;
+export declare const MATIC: Currency;
+export declare const ETHER_CURRENCIES: Currency[];
+export declare const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[];
