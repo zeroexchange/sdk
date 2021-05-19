@@ -1,4 +1,4 @@
-import { AVAX, BNB, Currency, ETHER } from './currency'
+import { AVAX, BNB, Currency, ETHER, ETHER_CURRENCIES } from './currency'
 import { ChainId, ONE, TradeType, ZERO } from '../constants'
 import { Token, WETH, currencyEquals } from './token'
 
@@ -89,7 +89,7 @@ export interface BestTradeOptions {
  */
 function wrappedAmount(currencyAmount: CurrencyAmount, chainId: ChainId): TokenAmount {
   if (currencyAmount instanceof TokenAmount) return currencyAmount
-  if (currencyAmount.currency === ETHER || currencyAmount.currency === AVAX || currencyAmount.currency === BNB) {
+  if (ETHER_CURRENCIES.includes(currencyAmount.currency)) {
     return new TokenAmount(WETH[chainId], currencyAmount.raw)
   }
   invariant(false, 'CURRENCY')
@@ -97,9 +97,9 @@ function wrappedAmount(currencyAmount: CurrencyAmount, chainId: ChainId): TokenA
 
 function wrappedCurrency(currency: Currency, chainId: ChainId): Token {
   if (currency instanceof Token) return currency
-  if (currency === ETHER) return WETH[chainId]
-  if (currency === AVAX) return WETH[chainId]
-  if (currency === BNB) return WETH[chainId]
+  if (ETHER_CURRENCIES.includes(currency)) {
+    return WETH[chainId];
+  }
   invariant(false, 'CURRENCY')
 }
 

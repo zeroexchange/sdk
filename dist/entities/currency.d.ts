@@ -28,4 +28,5 @@ declare const AVAX: Currency;
 declare const BNB: Currency;
 declare const DEV: Currency;
 declare const MATIC: Currency;
-export { ETHER, AVAX, BNB, DEV, MATIC };
+declare const ETHER_CURRENCIES: Currency[];
+export { ETHER, AVAX, BNB, DEV, MATIC, ETHER_CURRENCIES };

@@ -42,4 +42,5 @@ const AVAX = Currency.AVAX
 const BNB = Currency.BNB
 const DEV = Currency.DEV
 const MATIC = Currency.MATIC
-export { ETHER, AVAX, BNB, DEV, MATIC }
+const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC];
+export { ETHER, AVAX, BNB, DEV, MATIC, ETHER_CURRENCIES }

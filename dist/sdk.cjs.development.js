@@ -455,6 +455,7 @@ var AVAX = Currency.AVAX;
 var BNB = Currency.BNB;
 var DEV = Currency.DEV;
 var MATIC = Currency.MATIC;
+var ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC];
 
 var _WETH;
 /**
@@ -1191,7 +1192,7 @@ function tradeComparator(a, b) {
 function wrappedAmount(currencyAmount, chainId) {
   if (currencyAmount instanceof TokenAmount) return currencyAmount;
 
-  if (currencyAmount.currency === ETHER || currencyAmount.currency === AVAX || currencyAmount.currency === BNB) {
+  if (ETHER_CURRENCIES.includes(currencyAmount.currency)) {
     return new TokenAmount(WETH[chainId], currencyAmount.raw);
   }
 
@@ -1200,9 +1201,11 @@ function wrappedAmount(currencyAmount, chainId) {
 
 function wrappedCurrency(currency, chainId) {
   if (currency instanceof Token) return currency;
-  if (currency === ETHER) return WETH[chainId];
-  if (currency === AVAX) return WETH[chainId];
-  if (currency === BNB) return WETH[chainId];
+
+  if (ETHER_CURRENCIES.includes(currency)) {
+    return WETH[chainId];
+  }
+
     invariant(false, 'CURRENCY')  ;
 }
 /**
@@ -1497,8 +1500,8 @@ var Router = /*#__PURE__*/function () {
 
 
   Router.swapCallParameters = function swapCallParameters(trade, options) {
-    var etherIn = trade.inputAmount.currency === ETHER || trade.inputAmount.currency === AVAX || trade.inputAmount.currency === BNB;
-    var etherOut = trade.outputAmount.currency === ETHER || trade.outputAmount.currency === AVAX || trade.outputAmount.currency === BNB; // the router does not support both ether in and out
+    var etherIn = ETHER_CURRENCIES.includes(trade.inputAmount.currency);
+    var etherOut = ETHER_CURRENCIES.includes(trade.outputAmount.currency); // the router does not support both ether in and out
 
     !!(etherIn && etherOut) ?  invariant(false, 'ETHER_IN_OUT')  : void 0;
     !(!('ttl' in options) || options.ttl > 0) ?  invariant(false, 'TTL')  : void 0;
@@ -2496,6 +2499,7 @@ exports.Currency = Currency;
 exports.CurrencyAmount = CurrencyAmount;
 exports.DEV = DEV;
 exports.ETHER = ETHER;
+exports.ETHER_CURRENCIES = ETHER_CURRENCIES;
 exports.FACTORY_ADDRESS = FACTORY_ADDRESS;
 exports.FACTORY_AND_INIT = FACTORY_AND_INIT;
 exports.Fetcher = Fetcher;
