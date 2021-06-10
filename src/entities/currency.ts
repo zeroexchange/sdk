@@ -19,7 +19,7 @@ export class Currency {
   public static readonly BNB: Currency = new Currency(18, 'BNB', 'BNB')
   public static readonly DEV: Currency = new Currency(18, 'DEV', 'DEV')
   public static readonly MATIC: Currency = new Currency(18, 'MATIC', 'MATIC')
-
+  public static readonly HECO: Currency = new Currency(18, 'HT', 'HECO')
 
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
@@ -41,7 +41,8 @@ export const AVAX = Currency.AVAX
 export const BNB = Currency.BNB
 export const DEV = Currency.DEV
 export const MATIC = Currency.MATIC
-export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC];
+export const HECO = Currency.HECO
+export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO];
 
 export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.MAINNET, ETHER],
@@ -56,4 +57,5 @@ export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.MOONBASE_ALPHA, DEV],
   [ChainId.MUMBAI, MATIC],
   [ChainId.MATIC, MATIC],
+  [ChainId.HECO, HECO],
 ];
