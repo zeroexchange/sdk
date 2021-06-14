@@ -15,7 +15,8 @@ export enum ChainId {
   SMART_CHAIN_TEST = 97,
   MOONBASE_ALPHA = 1287,
   MUMBAI = 80001,
-  MATIC = 137
+  MATIC = 137,
+  HECO = 128,
 }
 
 export enum TradeType {
@@ -70,6 +71,10 @@ export const FACTORY_AND_INIT: any = {
   },
   [ChainId.MATIC]: {
     factoryAddress: '0x6FD98Cf211134081fe02F551D64Cf89671D5443b',
+    initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
+  },
+  [ChainId.HECO]: {
+    factoryAddress: '0x90466Fa3B137b56e52eF987BD6e26aca87A32fF2',
     initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
   },
 }

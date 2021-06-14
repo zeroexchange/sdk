@@ -16,6 +16,7 @@ export declare class Currency {
     static readonly BNB: Currency;
     static readonly DEV: Currency;
     static readonly MATIC: Currency;
+    static readonly HECO: Currency;
     /**
      * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
      * @param decimals decimals of the currency
@@ -29,5 +30,7 @@ export declare const AVAX: Currency;
 export declare const BNB: Currency;
 export declare const DEV: Currency;
 export declare const MATIC: Currency;
+export declare const HECO: Currency;
 export declare const ETHER_CURRENCIES: Currency[];
+export declare const ETHER_NAMES_CURRENCIES: string[];
 export declare const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[];

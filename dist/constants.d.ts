@@ -12,7 +12,8 @@ export declare enum ChainId {
     SMART_CHAIN_TEST = 97,
     MOONBASE_ALPHA = 1287,
     MUMBAI = 80001,
-    MATIC = 137
+    MATIC = 137,
+    HECO = 128
 }
 export declare enum TradeType {
     EXACT_INPUT = 0,
