@@ -885,6 +885,12 @@ var Pair = /*#__PURE__*/function () {
     var _PAIR_ADDRESS_CACHE, _PAIR_ADDRESS_CACHE$t;
 
     var tokens = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA]; // does safety checks
+    // hardcode BIOS/ETH pool for SushiSwap
+
+    var biosToken = '0xE9a889E6963f122a98f8083d951c71329c726c0A';
+    var xiotToken = '0x31024A4C3e9aEeb256B825790F5cb7ac645e7cD5';
+    var biosEthPair = '0xE9a889E6963f122a98f8083d951c71329c726c0A';
+    if (tokens[0].address == xiotToken && tokens[1].address == biosToken) return biosEthPair;
 
     if (((_PAIR_ADDRESS_CACHE = PAIR_ADDRESS_CACHE) == null ? void 0 : (_PAIR_ADDRESS_CACHE$t = _PAIR_ADDRESS_CACHE[tokens[0].address]) == null ? void 0 : _PAIR_ADDRESS_CACHE$t[tokens[1].address]) === undefined) {
       var _PAIR_ADDRESS_CACHE2, _FACTORY_AND_INIT$tok, _tokens$, _FACTORY_AND_INIT$tok2, _tokens$2, _extends2, _extends3;

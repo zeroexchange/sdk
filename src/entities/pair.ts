@@ -28,6 +28,15 @@ export class Pair {
 
   public static getAddress(tokenA: Token, tokenB: Token): string {
     const tokens = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA] // does safety checks
+
+
+    // hardcode BIOS/ETH pool for SushiSwap
+    const biosToken = '0xE9a889E6963f122a98f8083d951c71329c726c0A';
+    const xiotToken = '0x31024A4C3e9aEeb256B825790F5cb7ac645e7cD5';
+    const biosEthPair = '0xE9a889E6963f122a98f8083d951c71329c726c0A';
+    if (tokens[0].address == xiotToken && tokens[1].address == biosToken) return biosEthPair;
+
+
     if (PAIR_ADDRESS_CACHE ?.[tokens[0].address] ?.[tokens[1].address] === undefined) {
       PAIR_ADDRESS_CACHE = {
         ...PAIR_ADDRESS_CACHE,
