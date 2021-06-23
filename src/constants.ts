@@ -74,7 +74,7 @@ export const FACTORY_AND_INIT: any = {
     initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
   },
   [ChainId.HECO]: {
-    factoryAddress: '0x90466Fa3B137b56e52eF987BD6e26aca87A32fF2',
+    factoryAddress: '0xf54e0e467f9644b73819637b30de52b5a1d511e6',
     initCodeHash: '0x4b5b254233f8aba1e01c0538653d54036e3c9f7873daf99623bb358f1cf33188'
   },
 }
