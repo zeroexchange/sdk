@@ -43,7 +43,7 @@ export const DEV = Currency.DEV
 export const MATIC = Currency.MATIC
 export const HECO = Currency.HECO
 export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO];
-export const ETHER_NAMES_CURRENCIES = ['ETHER', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT'];
+export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT'];
 
 export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.MAINNET, ETHER],
