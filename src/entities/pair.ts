@@ -23,9 +23,17 @@ import invariant from 'tiny-invariant'
 let PAIR_ADDRESS_CACHE: { [token0Address: string]: { [token1Address: string]: string } } = {
   // hardcode BIOS/ETH pool for SushiSwap
   '0xAACa86B876ca011844b5798ECA7a67591A9743C8': {
-    '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2': '0xE9a889E6963f122a98f8083d951c71329c726c0A' 
+    '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2': '0xE9a889E6963f122a98f8083d951c71329c726c0A',
+  },
+  // hardcode BNB/RELAY pool for PancakeSwap
+  '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c': {
+    '0xE338D4250A4d959F88Ff8789EaaE8c32700BD175': '0x1dE027DED494175C229c016A9697F85794006a59',
+  },
+  // hardcode AVAX/RELAY pool for Trader Joe
+  '0x78c42324016cd91D1827924711563fb66E33A83A': {
+    '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7': '0x41f3092d6Dd8dB25ec0f7395F56CAc107EcB7A12',
   }
-}
+};
 
 export class Pair {
   public readonly liquidityToken: Token
