@@ -2,6 +2,7 @@ import { ChainId, SolidityType } from '../constants'
 
 import JSBI from 'jsbi'
 import { validateSolidityTypeInstance } from '../utils'
+
 /**
  * A currency is any fungible financial instrument on Ethereum, including Ether and all ERC20 tokens.
  *
@@ -44,7 +45,7 @@ export const BNB = Currency.BNB
 export const DEV = Currency.DEV
 export const MATIC = Currency.MATIC
 export const HECO = Currency.HECO
-export const MOVR = Currency.HECO
+export const MOVR = Currency.MOVR
 export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR];
 export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR'];
 
@@ -59,7 +60,7 @@ export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.SMART_CHAIN, BNB],
   [ChainId.SMART_CHAIN_TEST, BNB],
   [ChainId.MOONBASE_ALPHA, DEV],
-  [ChainId.MOONBASE_ALPHA, MOVR],
+  [ChainId.MOONRIVER, MOVR],
   [ChainId.MUMBAI, MATIC],
   [ChainId.MATIC, MATIC],
   [ChainId.HECO, HECO],

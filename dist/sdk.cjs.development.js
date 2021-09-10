@@ -463,10 +463,10 @@ var BNB = Currency.BNB;
 var DEV = Currency.DEV;
 var MATIC = Currency.MATIC;
 var HECO = Currency.HECO;
-var MOVR = Currency.HECO;
+var MOVR = Currency.MOVR;
 var ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR];
 var ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR'];
-var CHAIN_IDS_AND_CURRENCIES = [[exports.ChainId.MAINNET, ETHER], [exports.ChainId.ROPSTEN, ETHER], [exports.ChainId.RINKEBY, ETHER], [exports.ChainId.GÖRLI, ETHER], [exports.ChainId.KOVAN, ETHER], [exports.ChainId.FUJI, AVAX], [exports.ChainId.AVALANCHE, AVAX], [exports.ChainId.SMART_CHAIN, BNB], [exports.ChainId.SMART_CHAIN_TEST, BNB], [exports.ChainId.MOONBASE_ALPHA, DEV], [exports.ChainId.MOONBASE_ALPHA, MOVR], [exports.ChainId.MUMBAI, MATIC], [exports.ChainId.MATIC, MATIC], [exports.ChainId.HECO, HECO]];
+var CHAIN_IDS_AND_CURRENCIES = [[exports.ChainId.MAINNET, ETHER], [exports.ChainId.ROPSTEN, ETHER], [exports.ChainId.RINKEBY, ETHER], [exports.ChainId.GÖRLI, ETHER], [exports.ChainId.KOVAN, ETHER], [exports.ChainId.FUJI, AVAX], [exports.ChainId.AVALANCHE, AVAX], [exports.ChainId.SMART_CHAIN, BNB], [exports.ChainId.SMART_CHAIN_TEST, BNB], [exports.ChainId.MOONBASE_ALPHA, DEV], [exports.ChainId.MOONRIVER, MOVR], [exports.ChainId.MUMBAI, MATIC], [exports.ChainId.MATIC, MATIC], [exports.ChainId.HECO, HECO]];
 
 var _WETH;
 /**
