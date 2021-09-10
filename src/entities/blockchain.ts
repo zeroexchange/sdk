@@ -1,5 +1,4 @@
 import JSBI from 'jsbi'
-
 import { SolidityType } from '../constants'
 import { validateSolidityTypeInstance } from '../utils'
 
@@ -23,6 +22,7 @@ export class Blockchain {
   public static readonly SMART_CHAIN: Blockchain = new Blockchain(18, 'BNB', 'Smart Chain')
   public static readonly SMART_CHAIN_TEST: Blockchain = new Blockchain(18, 'TBNB', 'Smart Chain (Testnet)')
   public static readonly MOONBASE_ALPHA: Blockchain = new Blockchain(18, 'DEV', 'Moonbase Alpha (Testnet)')
+  public static readonly MOONRIVER: Blockchain = new Blockchain(18, 'MOVR', 'Moonriver')
   public static readonly MUMBAI: Blockchain = new Blockchain(18, 'MATIC', 'Mumbai (Testnet)')
   public static readonly MATIC: Blockchain = new Blockchain(18, 'MATIC', 'Matic (Mainnet)')
   public static readonly HECO: Blockchain = new Blockchain(18, 'HT', 'Heco (Mainnet)')
