@@ -17,6 +17,7 @@ export declare class Blockchain {
     static readonly SMART_CHAIN: Blockchain;
     static readonly SMART_CHAIN_TEST: Blockchain;
     static readonly MOONBASE_ALPHA: Blockchain;
+    static readonly MOONRIVER: Blockchain;
     static readonly MUMBAI: Blockchain;
     static readonly MATIC: Blockchain;
     static readonly HECO: Blockchain;

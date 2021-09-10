@@ -11,6 +11,7 @@ export declare enum ChainId {
     SMART_CHAIN = 56,
     SMART_CHAIN_TEST = 97,
     MOONBASE_ALPHA = 1287,
+    MOONRIVER = 1285,
     MUMBAI = 80001,
     MATIC = 137,
     HECO = 128
