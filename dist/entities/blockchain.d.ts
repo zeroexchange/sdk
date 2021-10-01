@@ -21,6 +21,7 @@ export declare class Blockchain {
     static readonly MUMBAI: Blockchain;
     static readonly MATIC: Blockchain;
     static readonly HECO: Blockchain;
+    static readonly FANTOM: Blockchain;
     /**
      * Constructs an instance of the base class `Blockchain`. The only instance of the base class `Blockchain` is `Blockchain.ETHER`.
      * @param decimals decimals of the currency

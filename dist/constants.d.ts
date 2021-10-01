@@ -14,7 +14,8 @@ export declare enum ChainId {
     MOONRIVER = 1285,
     MUMBAI = 80001,
     MATIC = 137,
-    HECO = 128
+    HECO = 128,
+    FANTOM = 250
 }
 export declare enum TradeType {
     EXACT_INPUT = 0,

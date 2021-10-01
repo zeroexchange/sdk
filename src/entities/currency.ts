@@ -23,6 +23,7 @@ export class Currency {
   public static readonly MATIC: Currency = new Currency(18, 'MATIC', 'MATIC')
   public static readonly HECO: Currency = new Currency(18, 'HT', 'HT')
   public static readonly MOVR: Currency = new Currency(18, 'MOVR', 'MOVR')
+  public static readonly FTM: Currency = new Currency(18, 'FTM', 'FTM')
 
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
@@ -46,8 +47,9 @@ export const DEV = Currency.DEV
 export const MATIC = Currency.MATIC
 export const HECO = Currency.HECO
 export const MOVR = Currency.MOVR
-export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR];
-export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR'];
+export const FTM = Currency.FTM
+export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM];
+export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM'];
 
 export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.MAINNET, ETHER],
@@ -64,4 +66,5 @@ export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.MUMBAI, MATIC],
   [ChainId.MATIC, MATIC],
   [ChainId.HECO, HECO],
+  [ChainId.FANTOM, FTM],
 ];

@@ -18,6 +18,7 @@ export enum ChainId {
   MUMBAI = 80001,
   MATIC = 137,
   HECO = 128,
+  FANTOM = 250
 }
 
 export enum TradeType {

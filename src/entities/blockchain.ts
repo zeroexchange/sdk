@@ -26,7 +26,7 @@ export class Blockchain {
   public static readonly MUMBAI: Blockchain = new Blockchain(18, 'MATIC', 'Mumbai (Testnet)')
   public static readonly MATIC: Blockchain = new Blockchain(18, 'MATIC', 'Matic (Mainnet)')
   public static readonly HECO: Blockchain = new Blockchain(18, 'HT', 'Heco (Mainnet)')
-
+  public static readonly FANTOM: Blockchain = new Blockchain(18, 'FTM', 'Fantom (Mainnet)')
   /**
    * Constructs an instance of the base class `Blockchain`. The only instance of the base class `Blockchain` is `Blockchain.ETHER`.
    * @param decimals decimals of the currency
