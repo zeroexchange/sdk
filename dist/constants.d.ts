@@ -19,7 +19,22 @@ export declare enum ChainId {
     SHIDEN = 336
 }
 export declare const ETHERSCAN_PREFIXES: {
-    [chainId in ChainId]: string;
+    1: string;
+    3: string;
+    4: string;
+    5: string;
+    42: string;
+    43113: string;
+    43114: string;
+    97: string;
+    56: string;
+    1287: string;
+    80001: string;
+    137: string;
+    128: string;
+    1285: string;
+    250: string;
+    336: string;
 };
 export declare enum TradeType {
     EXACT_INPUT = 0,

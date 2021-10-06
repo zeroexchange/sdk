@@ -22,7 +22,7 @@ export enum ChainId {
   SHIDEN = 336
 }
 
-export const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
+export const ETHERSCAN_PREFIXES = {
   1: '',
   3: 'ropsten.',
   4: 'rinkeby.',
