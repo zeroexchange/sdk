@@ -24,6 +24,7 @@ export class Currency {
   public static readonly HECO: Currency = new Currency(18, 'HT', 'HT')
   public static readonly MOVR: Currency = new Currency(18, 'MOVR', 'MOVR')
   public static readonly FTM: Currency = new Currency(18, 'FTM', 'FTM')
+  public static readonly SDN: Currency = new Currency(18, 'SDN', 'SDN')
 
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
@@ -48,8 +49,9 @@ export const MATIC = Currency.MATIC
 export const HECO = Currency.HECO
 export const MOVR = Currency.MOVR
 export const FTM = Currency.FTM
-export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM];
-export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM'];
+export const SDN = Currency.SDN
+export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM, SDN];
+export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM', 'SDN'];
 
 export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.MAINNET, ETHER],
@@ -67,4 +69,38 @@ export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.MATIC, MATIC],
   [ChainId.HECO, HECO],
   [ChainId.FANTOM, FTM],
+  [ChainId.SHIDEN, SDN],
 ];
+
+export const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
+  [ChainId.RINKEBY]: 'Rinkeby',
+  [ChainId.ROPSTEN]: 'Ropsten',
+  [ChainId.GÖRLI]: 'Görli',
+  [ChainId.KOVAN]: 'Kovan',
+  [ChainId.FUJI]: 'Avalanche',
+  [ChainId.AVALANCHE]: 'Avalanche',
+  [ChainId.SMART_CHAIN]: 'SmartChain',
+  [ChainId.SMART_CHAIN_TEST]: 'SmartChainTestnet',
+  [ChainId.MOONBASE_ALPHA]: 'Moonbeam',
+  [ChainId.MUMBAI]: 'Mumbai',
+  [ChainId.MAINNET]: 'Ethereum',
+  [ChainId.MATIC]: 'Polygon',
+  [ChainId.HECO]: 'HECO',
+  [ChainId.MOONRIVER]: 'Moonriver',
+  [ChainId.FANTOM]: 'Fantom'
+}
+
+export const NETWORK_SYMBOLS: any = {
+  Ethereum: 'ETH',
+  Rinkeby: 'ETH',
+  Ropsten: 'ETH',
+  Görli: 'ETH',
+  Kovan: 'ETH',
+  Avalanche: 'AVAX',
+  SmartChain: 'BNB',
+  Moonbeam: 'DEV',
+  Polygon: 'MATIC',
+  HECO: 'HT',
+  Moonriver: 'MOVR',
+  Fantom: 'FTM'
+}

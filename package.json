@@ -1,8 +1,8 @@
 {
     "name": "@zeroexchange/sdk",
     "license": "MIT",
-    "version": "3.2.25",
-    "description": "🏂 An SDK for building applications on top of Zero Exchange.",
+    "version": "3.2.26",
+    "description": "🏂 An SDK for building applications on top of RELAY Exchange.",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "files": [
@@ -11,6 +11,7 @@
     "repository": "https://github.com/zeroexchange/sdk.git",
     "keywords": [
         "zeroexchange",
+        "relay",
         "zero",
         "avalanche",
         "uniswap"

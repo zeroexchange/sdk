@@ -40,4 +40,5 @@ export declare const WETH: {
     137: Token;
     128: Token;
     250: Token;
+    336: Token;
 };

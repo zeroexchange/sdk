@@ -18,7 +18,27 @@ export enum ChainId {
   MUMBAI = 80001,
   MATIC = 137,
   HECO = 128,
-  FANTOM = 250
+  FANTOM = 250,
+  SHIDEN = 336
+}
+
+export const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
+  1: '',
+  3: 'ropsten.',
+  4: 'rinkeby.',
+  5: 'goerli.',
+  42: 'kovan.',
+  43113: 'FUJI',
+  43114: 'AVALANCHE',
+  97: 'SMART_CHAIN_TEST',
+  56: 'SMART_CHAIN',
+  1287: 'MOONBASE_ALPHA',
+  80001: 'MUMBAI',
+  137: 'MATIC',
+  128: 'HECO',
+  1285: 'MOONRIVER',
+  250: 'FANTOM',
+  336: 'SHIDEN'
 }
 
 export enum TradeType {

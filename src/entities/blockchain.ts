@@ -27,6 +27,7 @@ export class Blockchain {
   public static readonly MATIC: Blockchain = new Blockchain(18, 'MATIC', 'Matic (Mainnet)')
   public static readonly HECO: Blockchain = new Blockchain(18, 'HT', 'Heco (Mainnet)')
   public static readonly FANTOM: Blockchain = new Blockchain(18, 'FTM', 'Fantom (Mainnet)')
+  public static readonly SHIDEN: Blockchain = new Blockchain(18, 'SDN', 'Shiden Network')
   /**
    * Constructs an instance of the base class `Blockchain`. The only instance of the base class `Blockchain` is `Blockchain.ETHER`.
    * @param decimals decimals of the currency
@@ -49,4 +50,7 @@ const MOONBASE_ALPHA = Blockchain.MOONBASE_ALPHA
 const MUMBAI = Blockchain.MUMBAI
 const MATIC = Blockchain.MATIC
 const HECO = Blockchain.HECO
-export { ETHEREUM, AVALANCHE, SMART_CHAIN, MOONBASE_ALPHA, MUMBAI, MATIC, HECO }
+const FANTOM = Blockchain.FANTOM
+const SHIDEN = Blockchain.SHIDEN
+export { ETHEREUM, AVALANCHE, SMART_CHAIN, MOONBASE_ALPHA, MUMBAI, MATIC, HECO, FANTOM, SHIDEN }
+

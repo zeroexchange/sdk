@@ -15,8 +15,12 @@ export declare enum ChainId {
     MUMBAI = 80001,
     MATIC = 137,
     HECO = 128,
-    FANTOM = 250
+    FANTOM = 250,
+    SHIDEN = 336
 }
+export declare const ETHERSCAN_PREFIXES: {
+    [chainId in ChainId]: string;
+};
 export declare enum TradeType {
     EXACT_INPUT = 0,
     EXACT_OUTPUT = 1
