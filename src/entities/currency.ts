@@ -25,6 +25,7 @@ export class Currency {
   public static readonly MOVR: Currency = new Currency(18, 'MOVR', 'MOVR')
   public static readonly FTM: Currency = new Currency(18, 'FTM', 'FTM')
   public static readonly SDN: Currency = new Currency(18, 'SDN', 'SDN')
+  public static readonly IOTX: Currency = new Currency(18, 'IOTX', 'IOTX')
 
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
@@ -50,8 +51,9 @@ export const HECO = Currency.HECO
 export const MOVR = Currency.MOVR
 export const FTM = Currency.FTM
 export const SDN = Currency.SDN
-export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM, SDN];
-export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM', 'SDN'];
+export const IOTX = Currency.IOTX
+export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM, SDN, IOTX];
+export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM', 'SDN', 'IOTX'];
 
 export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.MAINNET, ETHER],
@@ -70,6 +72,8 @@ export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.HECO, HECO],
   [ChainId.FANTOM, FTM],
   [ChainId.SHIDEN, SDN],
+  [ChainId.SHIDEN, SDN],
+  [ChainId.IOTEX, IOTX],
 ];
 
 export const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
@@ -87,7 +91,9 @@ export const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
   [ChainId.MATIC]: 'Polygon',
   [ChainId.HECO]: 'HECO',
   [ChainId.MOONRIVER]: 'Moonriver',
-  [ChainId.FANTOM]: 'Fantom'
+  [ChainId.FANTOM]: 'Fantom',
+  [ChainId.SHIDEN]: 'Shiden',
+  [ChainId.IOTEX]: 'IoTeX'
 }
 
 export const NETWORK_SYMBOLS: any = {
@@ -102,5 +108,7 @@ export const NETWORK_SYMBOLS: any = {
   Polygon: 'MATIC',
   HECO: 'HT',
   Moonriver: 'MOVR',
-  Fantom: 'FTM'
+  Fantom: 'FTM',
+  Shiden: 'SDN',
+  Iotex: 'IOTX'
 }

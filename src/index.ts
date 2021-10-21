@@ -9,8 +9,10 @@ export {
   FACTORY_ADDRESS,
   INIT_CODE_HASH,
   FACTORY_AND_INIT,
-  MINIMUM_LIQUIDITY
+  MINIMUM_LIQUIDITY,
+  ETHERSCAN_PREFIXES
 } from './constants'
+
 
 export * from './errors'
 export * from './entities'
