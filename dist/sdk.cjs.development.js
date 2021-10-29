@@ -37,6 +37,7 @@ var _FACTORY_AND_INIT, _SOLIDITY_TYPE_MAXIMA;
   ChainId[ChainId["FANTOM"] = 250] = "FANTOM";
   ChainId[ChainId["SHIDEN"] = 336] = "SHIDEN";
   ChainId[ChainId["IOTEX"] = 4689] = "IOTEX";
+  ChainId[ChainId["HARMONY"] = 1666600000] = "HARMONY";
 })(exports.ChainId || (exports.ChainId = {}));
 
 var ETHERSCAN_PREFIXES = {
@@ -56,7 +57,8 @@ var ETHERSCAN_PREFIXES = {
   1285: 'MOONRIVER',
   250: 'FANTOM',
   336: 'SHIDEN',
-  4689: 'IOTEX'
+  4689: 'IOTEX',
+  1666600000: 'HARMONY'  
 };
 
 (function (TradeType) {

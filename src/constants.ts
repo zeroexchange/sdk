@@ -20,7 +20,8 @@ export enum ChainId {
   HECO = 128,
   FANTOM = 250,
   SHIDEN = 336,
-  IOTEX = 4689
+  IOTEX = 4689,
+  HARMONY = 1666600000
 }
 
 export const ETHERSCAN_PREFIXES = {
@@ -40,7 +41,9 @@ export const ETHERSCAN_PREFIXES = {
   1285: 'MOONRIVER',
   250: 'FANTOM',
   336: 'SHIDEN',
-  4689: 'IOTEX'
+  4689: 'IOTEX',
+  1666600000: 'HARMONY'
+  
 }
 
 export enum TradeType {
