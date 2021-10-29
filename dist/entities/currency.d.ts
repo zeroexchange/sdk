@@ -21,6 +21,7 @@ export declare class Currency {
     static readonly FTM: Currency;
     static readonly SDN: Currency;
     static readonly IOTX: Currency;
+    static readonly ONE: Currency;
     /**
      * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
      * @param decimals decimals of the currency
@@ -39,6 +40,7 @@ export declare const MOVR: Currency;
 export declare const FTM: Currency;
 export declare const SDN: Currency;
 export declare const IOTX: Currency;
+export declare const ONE: Currency;
 export declare const ETHER_CURRENCIES: Currency[];
 export declare const ETHER_NAMES_CURRENCIES: string[];
 export declare const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[];
