@@ -74,5 +74,6 @@ export const WETH = {
   [ChainId.FANTOM]: new Token(ChainId.FANTOM, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WFTM', ' Wrapped Fantom in Mainnet'),
   [ChainId.SHIDEN]: new Token(ChainId.SHIDEN, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WSDN', ' Wrapped Shiden in Mainnet'), 
   [ChainId.IOTEX]: new Token(ChainId.IOTEX, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WIOTX', ' Wrapped Iotex in Mainnet'), // to do paste true address
-  [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WONE', ' Wrapped Harmony in Mainnet') 
+  [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WONE', ' Wrapped Harmony in Mainnet'),
+  [ChainId.CRONOS]: new Token(ChainId.CRONOS, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WCRO', ' Wrapped Cronos in Mainnet')  
 }

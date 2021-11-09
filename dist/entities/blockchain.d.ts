@@ -25,6 +25,7 @@ export declare class Blockchain {
     static readonly SHIDEN: Blockchain;
     static readonly IOTEX: Blockchain;
     static readonly HARMONY: Blockchain;
+    static readonly CRONOS: Blockchain;
     /**
      * Constructs an instance of the base class `Blockchain`. The only instance of the base class `Blockchain` is `Blockchain.ETHER`.
      * @param decimals decimals of the currency
@@ -44,4 +45,5 @@ declare const FANTOM: Blockchain;
 declare const SHIDEN: Blockchain;
 declare const IOTEX: Blockchain;
 declare const HARMONY: Blockchain;
-export { ETHEREUM, AVALANCHE, SMART_CHAIN, MOONBASE_ALPHA, MUMBAI, MATIC, HECO, FANTOM, SHIDEN, IOTEX, HARMONY };
+declare const CRONOS: Blockchain;
+export { ETHEREUM, AVALANCHE, SMART_CHAIN, MOONBASE_ALPHA, MUMBAI, MATIC, HECO, FANTOM, SHIDEN, IOTEX, HARMONY, CRONOS };

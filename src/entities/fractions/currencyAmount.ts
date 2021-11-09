@@ -8,6 +8,7 @@ import _Big from 'big.js'
 import { currencyEquals } from '../token'
 import invariant from 'tiny-invariant'
 import toFormat from 'toformat'
+import { CRO } from 'entities'
 
 const Big = toFormat(_Big)
 
@@ -52,6 +53,9 @@ export class CurrencyAmount extends Fraction {
     }
     if (chainId && chainId === ChainId.HARMONY) {
       currency = ONE;
+    }
+    if (chainId && chainId === ChainId.CRONOS) {
+      currency = CRO;
     }
     return new CurrencyAmount(currency, amount)
   }
