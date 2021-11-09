@@ -7,7 +7,6 @@ import { keccak256, pack } from '@ethersproject/solidity';
 import _Decimal from 'decimal.js-light';
 import _Big from 'big.js';
 import toFormat from 'toformat';
-import { CRO as CRO$1 } from 'entities';
 import { Contract } from '@ethersproject/contracts';
 import { getNetwork } from '@ethersproject/networks';
 import { getDefaultProvider } from '@ethersproject/providers';
@@ -780,7 +779,7 @@ var CurrencyAmount = /*#__PURE__*/function (_Fraction) {
     }
 
     if (chainId && chainId === ChainId.CRONOS) {
-      currency = CRO$1;
+      currency = CRO;
     }
 
     return new CurrencyAmount(currency, amount);

@@ -12,7 +12,6 @@ var solidity = require('@ethersproject/solidity');
 var _Decimal = _interopDefault(require('decimal.js-light'));
 var _Big = _interopDefault(require('big.js'));
 var toFormat = _interopDefault(require('toformat'));
-var entities = require('entities');
 var contracts = require('@ethersproject/contracts');
 var networks = require('@ethersproject/networks');
 var providers = require('@ethersproject/providers');
@@ -781,7 +780,7 @@ var CurrencyAmount = /*#__PURE__*/function (_Fraction) {
     }
 
     if (chainId && chainId === exports.ChainId.CRONOS) {
-      currency = entities.CRO;
+      currency = CRO;
     }
 
     return new CurrencyAmount(currency, amount);

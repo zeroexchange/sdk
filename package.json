@@ -1,7 +1,7 @@
 {
     "name": "@zeroexchange/sdk",
     "license": "MIT",
-    "version": "3.2.31",
+    "version": "3.2.32",
     "description": "🏂 An SDK for building applications on top of RELAY Exchange.",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",

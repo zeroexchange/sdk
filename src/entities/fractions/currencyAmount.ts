@@ -1,4 +1,4 @@
-import { AVAX, BNB, Currency, DEV, ETHER, HECO, MATIC, MOVR, FTM, SDN, IOTX, ONE } from '../currency'
+import { AVAX, BNB, Currency, DEV, ETHER, HECO, MATIC, MOVR, FTM, SDN, IOTX, ONE, CRO } from '../currency'
 import { BigintIsh, ChainId, Rounding, SolidityType, TEN } from '../../constants'
 import { parseBigintIsh, validateSolidityTypeInstance } from '../../utils'
 
@@ -8,7 +8,6 @@ import _Big from 'big.js'
 import { currencyEquals } from '../token'
 import invariant from 'tiny-invariant'
 import toFormat from 'toformat'
-import { CRO } from 'entities'
 
 const Big = toFormat(_Big)
 
