@@ -722,7 +722,7 @@ var CurrencyAmount = /*#__PURE__*/function (_Fraction) {
 
     var parsedAmount = parseBigintIsh(amount);
     validateSolidityTypeInstance(parsedAmount, SolidityType.uint256);
-    _this = _Fraction.call(this, parsedAmount, JSBI.exponentiate(TEN, JSBI.BigInt(currency.decimals))) || this;
+    _this = _Fraction.call(this, parsedAmount, JSBI.exponentiate(TEN, JSBI.BigInt(currency == null ? void 0 : currency.decimals))) || this;
     _this.currency = currency;
     return _this;
   }

@@ -65,7 +65,7 @@ export class CurrencyAmount extends Fraction {
     const parsedAmount = parseBigintIsh(amount)
     validateSolidityTypeInstance(parsedAmount, SolidityType.uint256)
 
-    super(parsedAmount, JSBI.exponentiate(TEN, JSBI.BigInt(currency.decimals)))
+    super(parsedAmount, JSBI.exponentiate(TEN, JSBI.BigInt(currency?.decimals)))
     this.currency = currency
   }
 
