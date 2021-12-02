@@ -22,7 +22,8 @@ export enum ChainId {
   SHIDEN = 336,
   IOTEX = 4689,
   HARMONY = 1666600000,
-  CRONOS = 25
+  CRONOS = 25,
+  OKEX = 66,
 }
 
 export const ETHERSCAN_PREFIXES = {
@@ -44,7 +45,8 @@ export const ETHERSCAN_PREFIXES = {
   336: 'SHIDEN',
   4689: 'IOTEX',
   1666600000: 'HARMONY',
-  25: 'CRONOS'
+  25: 'CRONOS',
+  66: 'OKEX'
   
 }
 

@@ -19,7 +19,8 @@ export declare enum ChainId {
     SHIDEN = 336,
     IOTEX = 4689,
     HARMONY = 1666600000,
-    CRONOS = 25
+    CRONOS = 25,
+    OKEX = 66
 }
 export declare const ETHERSCAN_PREFIXES: {
     1: string;
@@ -41,6 +42,7 @@ export declare const ETHERSCAN_PREFIXES: {
     4689: string;
     1666600000: string;
     25: string;
+    66: string;
 };
 export declare enum TradeType {
     EXACT_INPUT = 0,

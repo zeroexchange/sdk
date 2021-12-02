@@ -28,6 +28,7 @@ export class Currency {
   public static readonly IOTX: Currency = new Currency(18, 'IOTX', 'IOTX')
   public static readonly ONE: Currency = new Currency(18, 'ONE', 'ONE')
   public static readonly CRO: Currency = new Currency(18, 'CRO', 'CRO')
+  public static readonly OKT: Currency = new Currency(18, 'OKT', 'OKT')
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
    * @param decimals decimals of the currency
@@ -55,8 +56,9 @@ export const SDN = Currency.SDN
 export const IOTX = Currency.IOTX
 export const ONE = Currency.ONE
 export const CRO = Currency.CRO
-export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM, SDN, IOTX, ONE, CRO];
-export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM', 'SDN', 'IOTX', 'ONE', 'CRO'];
+export const OKT = Currency.OKT
+export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM, SDN, IOTX, ONE, CRO, OKT];
+export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM', 'SDN', 'IOTX', 'ONE', 'CRO', 'OKT'];
 
 export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.MAINNET, ETHER],
@@ -79,6 +81,7 @@ export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.IOTEX, IOTX],
   [ChainId.HARMONY, ONE],
   [ChainId.CRONOS, CRO],
+  [ChainId.OKEX, OKT],
 ];
 
 export const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
@@ -100,7 +103,8 @@ export const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
   [ChainId.SHIDEN]: 'Shiden',
   [ChainId.IOTEX]: 'IoTeX',
   [ChainId.HARMONY]: 'Harmony',
-  [ChainId.CRONOS]: 'Cronos'
+  [ChainId.CRONOS]: 'Cronos',
+  [ChainId.OKEX]: 'OKEx'
 }
 
 export const NETWORK_SYMBOLS: any = {
@@ -119,5 +123,6 @@ export const NETWORK_SYMBOLS: any = {
   Shiden: 'SDN',
   Iotex: 'IOTX',
   Harmony: 'ONE',
-  Cronos: 'CRO'
+  Cronos: 'CRO',
+  OKEx: 'OKT'
 }
