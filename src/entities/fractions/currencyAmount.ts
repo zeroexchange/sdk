@@ -1,4 +1,4 @@
-import { AVAX, BNB, Currency, DEV, ETHER, HECO, MATIC, MOVR, FTM, SDN, IOTX, ONE, CRO, OKT } from '../currency'
+import { AVAX, BNB, Currency, DEV, ETHER, HECO, MATIC, MOVR, FTM, SDN, IOTX, ONE, CRO, OKT, MTV } from '../currency'
 import { BigintIsh, ChainId, Rounding, SolidityType, TEN } from '../../constants'
 import { parseBigintIsh, validateSolidityTypeInstance } from '../../utils'
 
@@ -58,6 +58,9 @@ export class CurrencyAmount extends Fraction {
     }
     if (chainId && chainId === ChainId.OKEX) {
       currency = OKT;
+    }
+    if (chainId && chainId === ChainId.MULTIVAC) {
+      currency = MTV;
     }
     return new CurrencyAmount(currency, amount)
   }

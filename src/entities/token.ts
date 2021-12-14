@@ -72,9 +72,10 @@ export const WETH = {
   [ChainId.MATIC]: new Token(ChainId.MATIC, '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270', 18, 'WMATIC', 'Wrapped MATIC in Mainnet'),
   [ChainId.HECO]: new Token(ChainId.HECO, '0x5545153CCFcA01fbd7Dd11C0b23ba694D9509A6F', 18, 'WHT', 'Wrapped HECO in Mainnet'),
   [ChainId.FANTOM]: new Token(ChainId.FANTOM, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WFTM', ' Wrapped Fantom in Mainnet'),
-  [ChainId.SHIDEN]: new Token(ChainId.SHIDEN, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WSDN', ' Wrapped Shiden in Mainnet'), 
+  [ChainId.SHIDEN]: new Token(ChainId.SHIDEN, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WSDN', ' Wrapped Shiden in Mainnet'),
   [ChainId.IOTEX]: new Token(ChainId.IOTEX, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WIOTX', ' Wrapped Iotex in Mainnet'), // to do paste true address
   [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WONE', ' Wrapped Harmony in Mainnet'),
-  [ChainId.CRONOS]: new Token(ChainId.CRONOS, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WCRO', ' Wrapped Cronos in Mainnet'),  
-  [ChainId.OKEX]: new Token(ChainId.OKEX, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WOKT', ' Wrapped Okex in Mainnet')  
+  [ChainId.CRONOS]: new Token(ChainId.CRONOS, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WCRO', ' Wrapped Cronos in Mainnet'),
+  [ChainId.OKEX]: new Token(ChainId.OKEX, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WOKT', ' Wrapped Okex in Mainnet'),
+  [ChainId.MULTIVAC]: new Token(ChainId.MULTIVAC, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WMTV', ' Wrapped MTV in Mainnet')
 }

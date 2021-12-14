@@ -32,6 +32,8 @@ export class Blockchain {
   public static readonly HARMONY: Blockchain = new Blockchain(18, 'ONE', 'Harmony Network')
   public static readonly CRONOS: Blockchain = new Blockchain(18, 'CRO', 'Cronos Network')
   public static readonly OKEX: Blockchain = new Blockchain(18, 'OKT', 'OKEx Network')
+  public static readonly MULTIVAC: Blockchain = new Blockchain(18, 'MTV', 'MULTIVAC Network')
+
   /**
    * Constructs an instance of the base class `Blockchain`. The only instance of the base class `Blockchain` is `Blockchain.ETHER`.
    * @param decimals decimals of the currency
@@ -60,5 +62,10 @@ const IOTEX = Blockchain.IOTEX
 const HARMONY = Blockchain.HARMONY
 const CRONOS = Blockchain.CRONOS
 const OKEX = Blockchain.OKEX
-export { ETHEREUM, AVALANCHE, SMART_CHAIN, MOONBASE_ALPHA, MUMBAI, MATIC, HECO, FANTOM, SHIDEN, IOTEX, HARMONY, CRONOS, OKEX }
+const MULTIVAC = Blockchain.MULTIVAC
+
+export {
+  ETHEREUM, AVALANCHE, SMART_CHAIN, MOONBASE_ALPHA, MUMBAI, MATIC,
+  HECO, FANTOM, SHIDEN, IOTEX, HARMONY, CRONOS, OKEX, MULTIVAC
+}
 

@@ -29,6 +29,8 @@ export class Currency {
   public static readonly ONE: Currency = new Currency(18, 'ONE', 'ONE')
   public static readonly CRO: Currency = new Currency(18, 'CRO', 'CRO')
   public static readonly OKT: Currency = new Currency(18, 'OKT', 'OKT')
+  public static readonly MTV: Currency = new Currency(18, 'MTV', 'MTV')
+
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
    * @param decimals decimals of the currency
@@ -57,8 +59,10 @@ export const IOTX = Currency.IOTX
 export const ONE = Currency.ONE
 export const CRO = Currency.CRO
 export const OKT = Currency.OKT
-export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM, SDN, IOTX, ONE, CRO, OKT];
-export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM', 'SDN', 'IOTX', 'ONE', 'CRO', 'OKT'];
+export const MTV = Currency.MTV
+
+export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM, SDN, IOTX, ONE, CRO, OKT, MTV];
+export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM', 'SDN', 'IOTX', 'ONE', 'CRO', 'OKT', 'MTV'];
 
 export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.MAINNET, ETHER],
@@ -82,6 +86,7 @@ export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.HARMONY, ONE],
   [ChainId.CRONOS, CRO],
   [ChainId.OKEX, OKT],
+  [ChainId.MULTIVAC, MTV],
 ];
 
 export const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
@@ -104,7 +109,8 @@ export const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
   [ChainId.IOTEX]: 'IoTeX',
   [ChainId.HARMONY]: 'Harmony',
   [ChainId.CRONOS]: 'Cronos',
-  [ChainId.OKEX]: 'OKEx'
+  [ChainId.OKEX]: 'OKEx',
+  [ChainId.MULTIVAC]: 'MultiVAC'
 }
 
 export const NETWORK_SYMBOLS: any = {
@@ -124,5 +130,6 @@ export const NETWORK_SYMBOLS: any = {
   Iotex: 'IOTX',
   Harmony: 'ONE',
   Cronos: 'CRO',
-  OKEx: 'OKT'
+  OKEx: 'OKT',
+  MultiVAC: 'MTV'
 }
