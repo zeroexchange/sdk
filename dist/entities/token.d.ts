@@ -6,12 +6,18 @@ import { Currency } from './currency';
 export declare class Token extends Currency {
     readonly chainId: ChainId;
     readonly address: string;
-    constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string);
+    readonly resourceId: string;
+    constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string, resourceId?: string);
     /**
      * Returns true if the two tokens are equivalent, i.e. have the same chainId and address.
      * @param other other token to compare
      */
     equals(other: Token): boolean;
+    /**
+    * Returns true if the two tokens are equivalent, i.e. have the same resourceId.
+    * @param other other token to compare
+    */
+    equalsResourceId(other: Token): boolean;
     /**
      * Returns true if the address of this token sorts before the address of the other token
      * @param other other token to compare

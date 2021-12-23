@@ -9,11 +9,13 @@ import { validateAndParseAddress } from '../utils'
 export class Token extends Currency {
   public readonly chainId: ChainId
   public readonly address: string
+  public readonly resourceId: string
 
-  public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
+  public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string, resourceId?: string) {
     super(decimals, symbol, name)
     this.chainId = chainId
     this.address = validateAndParseAddress(address)
+    this.resourceId = resourceId || ''
   }
 
   /**
@@ -26,6 +28,18 @@ export class Token extends Currency {
       return true
     }
     return this.chainId === other.chainId && this.address === other.address
+  }
+
+  /**
+  * Returns true if the two tokens are equivalent, i.e. have the same resourceId.
+  * @param other other token to compare
+  */
+  public equalsResourceId(other: Token): boolean {
+    // short circuit on reference equality
+    if (this === other) {
+      return true
+    }
+    return this.resourceId === other.resourceId
   }
 
   /**

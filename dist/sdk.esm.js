@@ -542,12 +542,13 @@ var _WETH;
 var Token = /*#__PURE__*/function (_Currency) {
   _inheritsLoose(Token, _Currency);
 
-  function Token(chainId, address, decimals, symbol, name) {
+  function Token(chainId, address, decimals, symbol, name, resourceId) {
     var _this;
 
     _this = _Currency.call(this, decimals, symbol, name) || this;
     _this.chainId = chainId;
     _this.address = validateAndParseAddress(address);
+    _this.resourceId = resourceId || '';
     return _this;
   }
   /**
@@ -565,6 +566,20 @@ var Token = /*#__PURE__*/function (_Currency) {
     }
 
     return this.chainId === other.chainId && this.address === other.address;
+  }
+  /**
+  * Returns true if the two tokens are equivalent, i.e. have the same resourceId.
+  * @param other other token to compare
+  */
+  ;
+
+  _proto.equalsResourceId = function equalsResourceId(other) {
+    // short circuit on reference equality
+    if (this === other) {
+      return true;
+    }
+
+    return this.resourceId === other.resourceId;
   }
   /**
    * Returns true if the address of this token sorts before the address of the other token
