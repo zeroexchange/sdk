@@ -25,6 +25,7 @@ export enum ChainId {
   CRONOS = 25,
   OKEX = 66,
   MULTIVAC = 62621,
+  METIS_NETWORK = 1088
 }
 
 export const ETHERSCAN_PREFIXES = {
@@ -48,7 +49,8 @@ export const ETHERSCAN_PREFIXES = {
   1666600000: 'HARMONY',
   25: 'CRONOS',
   66: 'OKEX',
-  62621: 'MULTIVAC'
+  62621: 'MULTIVAC',
+  1088: 'METIS_NETWORK'
 
 }
 

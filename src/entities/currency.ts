@@ -30,6 +30,7 @@ export class Currency {
   public static readonly CRO: Currency = new Currency(18, 'CRO', 'CRO')
   public static readonly OKT: Currency = new Currency(18, 'OKT', 'OKT')
   public static readonly MTV: Currency = new Currency(18, 'MTV', 'MTV')
+  public static readonly METIS: Currency = new Currency(18, 'METIS', 'METIS')
 
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
@@ -60,9 +61,10 @@ export const ONE = Currency.ONE
 export const CRO = Currency.CRO
 export const OKT = Currency.OKT
 export const MTV = Currency.MTV
+export const METIS = Currency.METIS
 
-export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM, SDN, IOTX, ONE, CRO, OKT, MTV];
-export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM', 'SDN', 'IOTX', 'ONE', 'CRO', 'OKT', 'MTV'];
+export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM, SDN, IOTX, ONE, CRO, OKT, MTV, METIS];
+export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM', 'SDN', 'IOTX', 'ONE', 'CRO', 'OKT', 'MTV', 'METIS'];
 
 export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.MAINNET, ETHER],
@@ -87,6 +89,7 @@ export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.CRONOS, CRO],
   [ChainId.OKEX, OKT],
   [ChainId.MULTIVAC, MTV],
+  [ChainId.METIS_NETWORK, METIS],
 ];
 
 export const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
@@ -110,7 +113,8 @@ export const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
   [ChainId.HARMONY]: 'Harmony',
   [ChainId.CRONOS]: 'Cronos',
   [ChainId.OKEX]: 'OKEx',
-  [ChainId.MULTIVAC]: 'MultiVAC'
+  [ChainId.MULTIVAC]: 'MultiVAC',
+  [ChainId.METIS_NETWORK]: 'MetisNetwork',
 }
 
 export const NETWORK_SYMBOLS: any = {
@@ -131,5 +135,6 @@ export const NETWORK_SYMBOLS: any = {
   Harmony: 'ONE',
   Cronos: 'CRO',
   OKEx: 'OKT',
-  MultiVAC: 'MTV'
+  MultiVAC: 'MTV',
+  MetisNetwork: 'METIS'
 }
