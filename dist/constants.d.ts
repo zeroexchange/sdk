@@ -22,7 +22,8 @@ export declare enum ChainId {
     CRONOS = 25,
     OKEX = 66,
     MULTIVAC = 62621,
-    METIS_NETWORK = 1088
+    METIS_NETWORK = 1088,
+    MOONBEAM = 1284
 }
 export declare const ETHERSCAN_PREFIXES: {
     1: string;
@@ -47,6 +48,7 @@ export declare const ETHERSCAN_PREFIXES: {
     66: string;
     62621: string;
     1088: string;
+    1284: string;
 };
 export declare enum TradeType {
     EXACT_INPUT = 0,

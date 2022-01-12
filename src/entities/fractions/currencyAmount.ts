@@ -1,4 +1,4 @@
-import { AVAX, BNB, Currency, DEV, ETHER, HECO, MATIC, MOVR, FTM, SDN, IOTX, ONE, CRO, OKT, MTV, METIS } from '../currency'
+import { AVAX, BNB, Currency, DEV, ETHER, HECO, MATIC, MOVR, FTM, SDN, IOTX, ONE, CRO, OKT, MTV, METIS, GLMR } from '../currency'
 import { BigintIsh, ChainId, Rounding, SolidityType, TEN } from '../../constants'
 import { parseBigintIsh, validateSolidityTypeInstance } from '../../utils'
 
@@ -64,6 +64,9 @@ export class CurrencyAmount extends Fraction {
     }
     if (chainId && chainId === ChainId.METIS_NETWORK) {
       currency = METIS;
+    }
+    if (chainId && chainId === ChainId.MOONBEAM) {
+      currency = GLMR;
     }
     return new CurrencyAmount(currency, amount)
   }

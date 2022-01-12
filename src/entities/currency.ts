@@ -31,6 +31,7 @@ export class Currency {
   public static readonly OKT: Currency = new Currency(18, 'OKT', 'OKT')
   public static readonly MTV: Currency = new Currency(18, 'MTV', 'MTV')
   public static readonly METIS: Currency = new Currency(18, 'METIS', 'METIS')
+  public static readonly GLMR: Currency = new Currency(18, 'GLMR', 'GLMR')
 
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
@@ -62,9 +63,10 @@ export const CRO = Currency.CRO
 export const OKT = Currency.OKT
 export const MTV = Currency.MTV
 export const METIS = Currency.METIS
+export const GLMR = Currency.GLMR
 
-export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM, SDN, IOTX, ONE, CRO, OKT, MTV, METIS];
-export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM', 'SDN', 'IOTX', 'ONE', 'CRO', 'OKT', 'MTV', 'METIS'];
+export const ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM, SDN, IOTX, ONE, CRO, OKT, MTV, METIS, GLMR];
+export const ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM', 'SDN', 'IOTX', 'ONE', 'CRO', 'OKT', 'MTV', 'METIS', 'GLMR'];
 
 export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.MAINNET, ETHER],
@@ -90,6 +92,7 @@ export const CHAIN_IDS_AND_CURRENCIES: ([ChainId, Currency])[] = [
   [ChainId.OKEX, OKT],
   [ChainId.MULTIVAC, MTV],
   [ChainId.METIS_NETWORK, METIS],
+  [ChainId.MOONBEAM, GLMR],
 ];
 
 export const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
@@ -101,7 +104,7 @@ export const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
   [ChainId.AVALANCHE]: 'Avalanche',
   [ChainId.SMART_CHAIN]: 'SmartChain',
   [ChainId.SMART_CHAIN_TEST]: 'SmartChainTestnet',
-  [ChainId.MOONBASE_ALPHA]: 'Moonbeam',
+  [ChainId.MOONBASE_ALPHA]: 'Moonbase',
   [ChainId.MUMBAI]: 'Mumbai',
   [ChainId.MAINNET]: 'Ethereum',
   [ChainId.MATIC]: 'Polygon',
@@ -115,6 +118,7 @@ export const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
   [ChainId.OKEX]: 'OKEx',
   [ChainId.MULTIVAC]: 'MultiVAC',
   [ChainId.METIS_NETWORK]: 'MetisNetwork',
+  [ChainId.MOONBEAM]: 'Moonbeam',
 }
 
 export const NETWORK_SYMBOLS: any = {
@@ -125,7 +129,7 @@ export const NETWORK_SYMBOLS: any = {
   Kovan: 'ETH',
   Avalanche: 'AVAX',
   SmartChain: 'BNB',
-  Moonbeam: 'DEV',
+  Moonbase: 'DEV',
   Polygon: 'MATIC',
   HECO: 'HT',
   Moonriver: 'MOVR',
@@ -136,5 +140,6 @@ export const NETWORK_SYMBOLS: any = {
   Cronos: 'CRO',
   OKEx: 'OKT',
   MultiVAC: 'MTV',
-  MetisNetwork: 'METIS'
+  MetisNetwork: 'METIS',
+  Moonbeam: 'GLMR',
 }

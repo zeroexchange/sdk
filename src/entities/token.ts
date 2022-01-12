@@ -92,5 +92,6 @@ export const WETH = {
   [ChainId.CRONOS]: new Token(ChainId.CRONOS, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WCRO', ' Wrapped Cronos in Mainnet'),
   [ChainId.OKEX]: new Token(ChainId.OKEX, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WOKT', ' Wrapped Okex in Mainnet'),
   [ChainId.MULTIVAC]: new Token(ChainId.MULTIVAC, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WMTV', ' Wrapped MTV in Mainnet'),
-  [ChainId.METIS_NETWORK]: new Token(ChainId.METIS_NETWORK, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WMETIS', ' Wrapped METIS in Mainnet')
+  [ChainId.METIS_NETWORK]: new Token(ChainId.METIS_NETWORK, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WMETIS', ' Wrapped METIS in Mainnet'),
+  [ChainId.MOONBEAM]: new Token(ChainId.MOONBEAM, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WGLMR', ' Wrapped GLMR in Mainnet')
 }

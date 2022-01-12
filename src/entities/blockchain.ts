@@ -34,6 +34,7 @@ export class Blockchain {
   public static readonly OKEX: Blockchain = new Blockchain(18, 'OKT', 'OKEx Network')
   public static readonly MULTIVAC: Blockchain = new Blockchain(18, 'MTV', 'MULTIVAC Network')
   public static readonly METIS_NETWORK: Blockchain = new Blockchain(18, 'METIS', 'METIS NETWORK')
+  public static readonly MOONBEAM: Blockchain = new Blockchain(18, 'GLMR', 'MOONBEAM NETWORK')
 
   /**
    * Constructs an instance of the base class `Blockchain`. The only instance of the base class `Blockchain` is `Blockchain.ETHER`.
@@ -65,9 +66,10 @@ const CRONOS = Blockchain.CRONOS
 const OKEX = Blockchain.OKEX
 const MULTIVAC = Blockchain.MULTIVAC
 const METIS_NETWORK = Blockchain.METIS_NETWORK
+const MOONBEAM = Blockchain.MOONBEAM
 
 export {
   ETHEREUM, AVALANCHE, SMART_CHAIN, MOONBASE_ALPHA, MUMBAI, MATIC,
-  HECO, FANTOM, SHIDEN, IOTEX, HARMONY, CRONOS, OKEX, MULTIVAC, METIS_NETWORK
+  HECO, FANTOM, SHIDEN, IOTEX, HARMONY, CRONOS, OKEX, MULTIVAC, METIS_NETWORK, MOONBEAM
 }
 
